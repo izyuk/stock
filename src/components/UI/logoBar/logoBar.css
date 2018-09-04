@@ -1,0 +1,57 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+.coloredBlock {
+  width: 100%;
+  background: #f1f1f1;
+  height: 80px;
+  display: flex;
+}
+.coloredBlock .wrap {
+  height: 100%;
+}
+.coloredBlock .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}
+.coloredBlock .bar > a {
+  display: flex;
+  align-items: center;
+}
+.coloredBlock .logo {
+  width: 100%;
+  max-width: 255px;
+}
+.coloredBlock .logo img {
+  width: 100%;
+}
+.coloredBlock .stateButtons {
+  display: flex;
+  align-items: center;
+}
+.coloredBlock .stateButtons .form a {
+  padding: 10px 15px;
+  border: 1px solid #063A66;
+  border-radius: 5px;
+}
+.coloredBlock .stateButtons .form a.register {
+  color: #fff;
+  background: #0B65B1;
+  margin-right: 10px;
+}
+.coloredBlock .stateButtons .form a.login {
+  color: #063A66;
+  background: #E2F0FC;
+}
+/*# sourceMappingURL=logoBar.css.map */

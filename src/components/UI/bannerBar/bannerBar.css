@@ -1,0 +1,100 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+.banner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.banner .imagesWrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.banner .imagesWrap .bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner .searchWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .searchWrap .controls {
+  width: 100%;
+  max-width: 900px;
+  height: 80px;
+  background: #fff;
+  display: flex;
+}
+.banner .searchWrap .controls input {
+  background: #fff;
+  border: 1px solid transparent;
+  flex: 10.25;
+  padding: 25px 0px 25px 20px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #95989A;
+}
+.banner .searchWrap .controls input::-webkit-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #95989A;
+}
+.banner .searchWrap .controls input::-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #95989A;
+}
+.banner .searchWrap .controls input:-ms-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #95989A;
+}
+.banner .searchWrap .controls input:-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #95989A;
+}
+.banner .searchWrap .controls button {
+  flex: 1;
+  border: 1px solid transparent;
+}
+.banner .plansWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .plansWrap p {
+  font-family: 'MyriadPro-Cond', sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+/*# sourceMappingURL=bannerBar.css.map */

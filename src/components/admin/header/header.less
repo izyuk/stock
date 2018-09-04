@@ -1,0 +1,97 @@
+@import '../../../static/exp';
+
+header{
+  &.adminWrap{
+    border-bottom: 1px solid @input_color;
+    border-bottom: 1px solid @input_color;
+  }
+}
+
+.barWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 40px;
+  .pageInfo {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .logo {
+      width: 100%;
+      max-width: 280px;
+      display: flex;
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+    .pageName {
+      h3 {
+        .font(@r_l, 28);
+      }
+    }
+  }
+  .userBar {
+    //flex: 1;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    .innerWrap {
+      width: 100%;
+      background: @l_gray;
+      display: flex;
+      align-items: stretch;
+      .user {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50px;
+        .avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+          overflow: hidden;
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: -25px;
+          background: @w;
+          img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+        .userName {
+          width: 200px;
+          display: flex;
+          justify-content: center;
+          p {
+            .font(@r_l, 16);
+          }
+        }
+      }
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid @input_color;
+        &.span1 {
+          width: 120px;
+        }
+        &.span2 {
+          width: 80px;
+        }
+        a {
+          .font(@r_l, 16);
+        }
+      }
+    }
+  }
+}
+
+//585
+//430

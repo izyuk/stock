@@ -1,0 +1,46 @@
+@w: #fff;
+@aqua: #73f5e2;
+@black: #000;
+@sdg: #1e1e1e;
+@r_r: 'MyriadPro-Regular';
+@r_b: 'MyriadPro-Bold';
+@r_l: 'MyriadPro-Cond';
+@r_li: 'MyriadPro-CondIt';
+@font: './static/fonts';
+
+@gray_menu_hover: #5d5d5d;
+@l_gray: #f1f1f1;
+@btn_register: #0B65B1;
+@btn_login: #E2F0FC;
+@btn_border: #063A66;
+@btn_color: #063A66;
+@trans: transparent;
+@input_color: #95989A;
+@hr: #909090;
+@randText: #212121;
+@reviewPlans: rgba(0, 0, 0, 0.6);
+
+@imgPath: '../../../static/img';
+.font(@font,
+@sizeValue) {
+  font-family: @font, sans-serif;
+  @remValue: (@sizeValue / 16);
+  @pxValue: @sizeValue;
+  font-size:~"@{pxValue}px";
+  font-size:~"@{remValue}rem";
+}
+
+.wrap{
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.adminWrap{
+  width: 100%;
+}
+
+.adminContent{
+  display: flex;
+  align-items: stretch;
+}

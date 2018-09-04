@@ -1,0 +1,104 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+header.adminWrap {
+  border-bottom: 1px solid #95989A;
+}
+.barWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 40px;
+}
+.barWrap .pageInfo {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.barWrap .pageInfo .logo {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+}
+.barWrap .pageInfo .logo img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.barWrap .pageInfo .pageName h3 {
+  font-family: 'MyriadPro-Cond', sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+.barWrap .userBar {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.barWrap .userBar .innerWrap {
+  width: 100%;
+  background: #f1f1f1;
+  display: flex;
+  align-items: stretch;
+}
+.barWrap .userBar .innerWrap .user {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+}
+.barWrap .userBar .innerWrap .user .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  background: #fff;
+}
+.barWrap .userBar .innerWrap .user .avatar img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.barWrap .userBar .innerWrap .user .userName {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+.barWrap .userBar .innerWrap .user .userName p {
+  font-family: 'MyriadPro-Cond', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.barWrap .userBar .innerWrap span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #95989A;
+}
+.barWrap .userBar .innerWrap span.span1 {
+  width: 120px;
+}
+.barWrap .userBar .innerWrap span.span2 {
+  width: 80px;
+}
+.barWrap .userBar .innerWrap span a {
+  font-family: 'MyriadPro-Cond', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=header.css.map */

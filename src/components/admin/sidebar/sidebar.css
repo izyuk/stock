@@ -1,0 +1,13 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+/*# sourceMappingURL=sidebar.css.map */
