@@ -1,0 +1,26 @@
+@import '../../../static/exp';
+
+footer{
+	background: @sdg;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 25px 40px;
+	.logo{
+		width: 100%;
+		max-width: 230px;
+		img{
+			width: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+	}
+	.copyText{
+		margin-left: 100px;
+		p{
+			.font(@r_l, 16);
+			color: @w;
+		}
+	}
+}

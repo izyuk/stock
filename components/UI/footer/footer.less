@@ -1,0 +1,72 @@
+@import '../../../static/exp';
+
+footer{
+  background: @sdg;
+  .wrap{
+    max-width: 1200px;
+  }
+}
+
+.fHead{
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid @w;
+}
+
+.categories{
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  .list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 165px;
+    height: auto;
+    &>li{
+      width: 100%;
+      max-width: 300px;
+      span{
+        .font(@r_r, 20);
+        color: @w;
+        cursor: pointer;
+        width: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &::after{
+          content: '';
+          position: relative;
+          right: -10px;
+          width: 24px;
+          height: 13px;
+          background: url('@{imgPath}/arrowDown.png');
+        }
+      }
+    }
+  }
+  .subList{
+    &>li{
+      padding: 10px 0;
+      a{
+        color: @w;
+      }
+    }
+  }
+}
+
+.copyright{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  p{
+    .font(@r_r, 14);
+    color: @w;
+  }
+}
