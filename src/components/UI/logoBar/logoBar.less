@@ -1,0 +1,48 @@
+@import '../../../static/exp';
+
+.coloredBlock{
+  width: 100%;
+  background: @l_gray;
+  height: 80px;
+  display: flex;
+  .wrap{
+    height: 100%;
+  }
+  .bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    &>a{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .logo{
+    width: 100%;
+    max-width: 255px;
+    img{
+      width: 100%;
+    }
+  }
+  .stateButtons{
+    display: flex;
+    align-items: center;
+    .form{
+      a{
+        padding: 10px 15px;
+        border: 1px solid @btn_border;
+        border-radius: 5px;
+        &.register{
+          color: @w;
+          background: @btn_register;
+          margin-right: 10px;
+        }
+        &.login{
+          color: @btn_color;
+          background: @btn_login;
+        }
+      }
+    }
+  }
+}

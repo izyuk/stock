@@ -1,0 +1,42 @@
+@import '../../../static/exp';
+
+.coloredBlock{
+  width: 100%;
+  background: @sdg;
+  height: 40px;
+  display: flex;
+  .wrap{
+    height: 100%;
+  }
+  .bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+  }
+  .menu{
+    display: flex;
+    align-items: stretch;
+    a{
+      display: flex;
+      text-align: center;
+      align-items: center;
+      text-decoration: none;
+      color: @w;
+      &:not(:first-child){
+        margin-left: 10px;
+      }
+      &:hover{
+        background: @gray_menu_hover;
+      }
+    }
+  }
+  .langList{
+    .current{
+
+    }
+    .list{
+
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+.coloredBlock {
+  width: 100%;
+  background: #1e1e1e;
+  height: 40px;
+  display: flex;
+}
+.coloredBlock .wrap {
+  height: 100%;
+}
+.coloredBlock .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}
+.coloredBlock .menu {
+  display: flex;
+  align-items: stretch;
+}
+.coloredBlock .menu a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.coloredBlock .menu a:not(:first-child) {
+  margin-left: 10px;
+}
+.coloredBlock .menu a:hover {
+  background: #5d5d5d;
+}
+/*# sourceMappingURL=header.css.map */

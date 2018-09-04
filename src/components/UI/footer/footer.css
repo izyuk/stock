@@ -1,0 +1,82 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+footer {
+  background: #1e1e1e;
+}
+footer .wrap {
+  max-width: 1200px;
+}
+.fHead {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+.categories {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.categories .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 165px;
+  height: auto;
+}
+.categories .list > li {
+  width: 100%;
+  max-width: 300px;
+}
+.categories .list > li span {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #fff;
+  cursor: pointer;
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.categories .list > li span::after {
+  content: '';
+  position: relative;
+  right: -10px;
+  width: 24px;
+  height: 13px;
+  background: url('../../../static/img/arrowDown.png');
+}
+.categories .subList > li {
+  padding: 10px 0;
+}
+.categories .subList > li a {
+  color: #fff;
+}
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.copyright p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #fff;
+}
+/*# sourceMappingURL=footer.css.map */
