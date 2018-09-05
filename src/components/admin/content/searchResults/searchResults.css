@@ -1,1 +1,105 @@
-.wrap{width:100%;max-width:1280px;margin:auto}.adminWrap{width:100%}.adminContent{display:flex;align-items:stretch}.contentWrap{width:100%;padding:30px 0 0 40px}.searchResultsWrap{width:100%;margin:60px 0}.searchResultsWrap table{width:100%;border-collapse:separate;border-spacing:0}.searchResultsWrap table thead tr{border-top:transparent;border-bottom:1px solid #909090}.searchResultsWrap table thead th{padding:5px 10px;text-align:left;background:#f1f1f1;margin:0 5px;align-items:center;text-align:center;vertical-align:middle;border:none}.searchResultsWrap table thead th.allFilter{width:75px}.searchResultsWrap table thead th.name{width:320px}.searchResultsWrap table thead th.preveiw{width:150px}.searchResultsWrap table thead th:first-child{margin-left:0}.searchResultsWrap table thead th:last-child{margin-right:0}.searchResultsWrap table thead th:first-child{margin-left:0}.searchResultsWrap table thead th:last-child{margin-right:0}.searchResultsWrap table thead th select{width:100%;border:none;background:0 0}.searchResultsWrap table tbody{width:100%}.searchResultsWrap table tbody tr{width:100%;border-top:transparent;border-bottom:1px solid #909090}.searchResultsWrap table tbody tr td{width:auto;margin:0 5px;padding:10px 5px;text-align:center;align-items:center;vertical-align:middle}.searchResultsWrap table tbody tr td.allFilter{width:75px}.searchResultsWrap table tbody tr td.name{width:320px}.searchResultsWrap table tbody tr td.preveiw{width:150px}.searchResultsWrap table tbody tr td:first-child{margin-left:0}.searchResultsWrap table tbody tr td:last-child{margin-right:0}.searchResultsWrap table tbody tr td img{width:100%;max-width:150px;object-fit:contain}
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+.contentWrap {
+  width: 100%;
+  padding: 30px 0 0 40px;
+}
+.searchResultsWrap {
+  width: 100%;
+  margin: 60px 0;
+  overflow-y: auto;
+}
+.searchResultsWrap table {
+  width: 100%;
+  min-width: 1500px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.searchResultsWrap table thead tr {
+  border-top: transparent;
+  border-bottom: 1px solid #909090;
+}
+.searchResultsWrap table thead th {
+  padding: 5px 10px;
+  background: #f1f1f1;
+  margin: 0 5px;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+.searchResultsWrap table thead th.allFilter {
+  width: 75px;
+}
+.searchResultsWrap table thead th.name {
+  width: 320px;
+}
+.searchResultsWrap table thead th.preview {
+  width: 150px;
+}
+.searchResultsWrap table thead th:first-child {
+  margin-left: 0;
+}
+.searchResultsWrap table thead th:last-child {
+  margin-right: 0;
+}
+.searchResultsWrap table thead th:first-child {
+  margin-left: 0;
+}
+.searchResultsWrap table thead th:last-child {
+  margin-right: 0;
+}
+.searchResultsWrap table thead th select {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+.searchResultsWrap table tbody {
+  width: 100%;
+}
+.searchResultsWrap table tbody tr {
+  width: 100%;
+  border-top: transparent;
+  border-bottom: 1px solid #909090;
+}
+.searchResultsWrap table tbody tr td {
+  width: auto;
+  margin: 0 5px;
+  padding: 10px 5px;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.searchResultsWrap table tbody tr td.allFilter {
+  width: 75px;
+}
+.searchResultsWrap table tbody tr td.name {
+  width: 320px;
+}
+.searchResultsWrap table tbody tr td.preveiw {
+  width: 150px;
+}
+.searchResultsWrap table tbody tr td:first-child {
+  margin-left: 0;
+}
+.searchResultsWrap table tbody tr td:last-child {
+  margin-right: 0;
+}
+.searchResultsWrap table tbody tr td img {
+  width: 100%;
+  max-width: 150px;
+  object-fit: contain;
+}
+/*# sourceMappingURL=searchResults.css.map */

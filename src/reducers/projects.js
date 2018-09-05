@@ -1,13 +1,19 @@
-export default function () {
-    return 1
+import ON_LOAD from '../actions';
+
+export default function (state=null, action) {
+    switch (action.type){
+        case ON_LOAD:
+            return Object.assign({}, state, {
+                newData: [
+                    ...state.newData,
+                    {
+                        data: action.data,
+                        completed: false
+                    }
+                ]
+            });
+            break;
+        default:
+            return state;
+    }
 }
-//
-// export default async function getMoviesFromApi() {
-//     try {
-//         let response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
-//         let responseJson = await response.json();
-//         return responseJson.movies;
-//     } catch(error) {
-//         console.error(error);
-//     }
-// }
