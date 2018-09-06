@@ -23,7 +23,21 @@ class Index extends Component {
         let res = Api.getCats();
         console.log(res);
         console.log(window.location.pathname);
+
+        /*let anotherRes = Api.another();
+        console.log(anotherRes);
+        this.gal(anotherRes);*/
     }
+
+    /*async gal(data){
+        let newData = {data:{}};
+        await Promise.all([data])
+            .then(function (value) {
+                newData['data'] = value[0];
+                return newData;
+            });
+        console.log(newData);
+    }*/
 
     render() {
         return (
