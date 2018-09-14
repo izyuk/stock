@@ -11,12 +11,19 @@ class Admin extends Component {
     render(){
         return(
             <div>
-                <Route exact path="/admin" component={Header}/>
+                {/*<Route exact path="/admin" component={Header}/>*/}
+                {/*<div className={style.adminContent}>*/}
+                    {/*<Route path="/admin" component={Sidebar}/>*/}
+                    {/*<Route path="/admin" component={Content}/>*/}
+                {/*</div>*/}
+                {/*<Route exact path="/admin" component={Footer}/>*/}
+                {/*To deploy*/}
+                <Route exact path="/stock/admin" component={Header}/>
                 <div className={style.adminContent}>
-                    <Route path="/admin" component={Sidebar}/>
-                    <Route path="/admin" component={Content}/>
+                    <Route path="/stock/admin" component={Sidebar}/>
+                    <Route path="/stock/admin" component={Content}/>
                 </div>
-                <Route exact path="/admin" component={Footer}/>
+                <Route exact path="/stock/admin" component={Footer}/>
             </div>
         )
     }

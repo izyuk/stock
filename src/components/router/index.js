@@ -7,11 +7,18 @@ export default class MainRouter extends Component {
     render(){
         return(
             <Switch>
+                {/*<Route exact*/}
+                       {/*path="/"*/}
+                       {/*component={Index}/>*/}
+                {/*<Route exact*/}
+                       {/*path="/admin"*/}
+                       {/*component={Admin}/>*/}
+                {/*To deploy*/}
                 <Route exact
-                       path="/"
+                       path="/stock"
                        component={Index}/>
                 <Route exact
-                       path="/admin"
+                       path="/stock/admin"
                        component={Admin}/>
             </Switch>
         )

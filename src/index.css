@@ -1,3 +1,4 @@
+@r _m 'MyriadPro-Cond';
 .wrap {
   width: 100%;
   max-width: 1280px;
@@ -9,6 +10,10 @@
 .adminContent {
   display: flex;
   align-items: stretch;
+}
+.contentWrap {
+  width: 100%;
+  padding: 30px 0 0 40px;
 }
 @font-face {
   font-family: 'MyriadPro-Regular';

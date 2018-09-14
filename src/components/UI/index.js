@@ -42,18 +42,31 @@ class Index extends Component {
     render() {
         return (
             <div className={style.mainWrap}>
-                <Route exact path="/" component={Header}/>
-                <Route exact path="/" component={LogoBar}/>
+                {/*<Route exact path="/" component={Header}/>*/}
+                {/*<Route exact path="/" component={LogoBar}/>*/}
+                {/*<Switch>*/}
+                    {/*<Route exact path="/">*/}
+                        {/*<div>*/}
+                            {/*<Route component={BannerBar}/>*/}
+                            {/*<Route component={HomeContent}/>*/}
+                        {/*</div>*/}
+                    {/*</Route>*/}
+                {/*</Switch>*/}
+                {/*<Route exact path="/" component={PopularCategories}/>*/}
+                {/*<Route exact path="/" component={Footer}/>*/}
+                {/*To deploy*/}
+                <Route exact path="/stock" component={Header}/>
+                <Route exact path="/stock" component={LogoBar}/>
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact path="/stock">
                         <div>
                             <Route component={BannerBar}/>
                             <Route component={HomeContent}/>
                         </div>
                     </Route>
                 </Switch>
-                <Route exact path="/" component={PopularCategories}/>
-                <Route exact path="/" component={Footer}/>
+                <Route exact path="/stock" component={PopularCategories}/>
+                <Route exact path="/stock" component={Footer}/>
             </div>
         );
     }
