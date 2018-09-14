@@ -46,17 +46,19 @@
   align-items: center;
 }
 .coloredBlock .stateButtons .form a {
-  padding: 10px 15px;
-  border: 1px solid #063A66;
-  border-radius: 5px;
-}
-.coloredBlock .stateButtons .form a.register {
-  color: #fff;
-  background: #0B65B1;
-  margin-right: 10px;
+  padding: 5px 15px;
+  border: 1px solid;
 }
 .coloredBlock .stateButtons .form a.login {
-  color: #063A66;
-  background: #E2F0FC;
+  color: #1e1e1e;
+  background: transparent;
+  border-color: transparent;
+}
+.coloredBlock .stateButtons .form a.register {
+  color: #1e1e1e;
+  background: transparent;
+  margin-left: 10px;
+  padding: 5px 25px;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=logoBar.css.map */

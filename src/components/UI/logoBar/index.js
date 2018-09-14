@@ -21,11 +21,11 @@ class LogoBar extends Component {
                         {/*</Link>*/}
                         {/*<div className={style.stateButtons}>*/}
                             {/*<div className={style.form}>*/}
-                                {/*<a href="#" className={style.register}>Зарегистрироваться</a>*/}
+                                {/*<a href="#" className={style.login}>Sign in</a>*/}
                                 {/*<Link to="/admin">*/}
                                     {/*<span>Admin</span>*/}
                                 {/*</Link>*/}
-                                {/*<a href="#" className={style.login}>Войти</a>*/}
+                                {/*<a href="#" className={style.register}>Join now</a>*/}
                             {/*</div>*/}
                         {/*</div>*/}
 
@@ -37,11 +37,11 @@ class LogoBar extends Component {
                         </Link>
                         <div className={style.stateButtons}>
                             <div className={style.form}>
-                                <a href="#" className={style.register}>Зарегистрироваться</a>
+                                <a href="#" className={style.login}>Sign in</a>
                                 <Link to="/stock/admin">
                                     <span>Admin</span>
                                 </Link>
-                                <a href="#" className={style.login}>Войти</a>
+                                <a href="#" className={style.register}>Join now</a>
                             </div>
                         </div>
                     </div>
