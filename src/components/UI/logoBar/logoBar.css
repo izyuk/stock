@@ -48,6 +48,7 @@
 .coloredBlock .stateButtons .form a {
   padding: 5px 15px;
   border: 1px solid;
+  border-radius: 2px;
 }
 .coloredBlock .stateButtons .form a.login {
   color: #1e1e1e;
