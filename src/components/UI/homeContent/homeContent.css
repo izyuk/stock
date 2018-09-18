@@ -82,6 +82,7 @@ h3 {
 .categoriesWrap .list .item {
   width: 100%;
   max-width: 300px;
+  margin-bottom: 20px;
 }
 .categoriesWrap .list .item a {
   display: flex;
