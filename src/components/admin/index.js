@@ -3,7 +3,7 @@ import {Router, Switch, Route, Redirect} from 'react-router-dom';
 
 import Header from './header';
 import Sidebar from './sidebar';
-import style from '../../static/exp';
+import style from '../../static/exp.less';
 
 class Admin extends Component {
     render(){
@@ -11,7 +11,7 @@ class Admin extends Component {
             <div>
                 <Route exact path="/admin" component={Header}/>
                 <div className={style.adminContent}>
-                    <Route path="/admin" component={Sidebar}>
+                    <Route path="/admin" component={Sidebar}/>
                 </div>
             </div>
         )
