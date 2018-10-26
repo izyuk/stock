@@ -22,19 +22,6 @@ const Api = {
             .then(res => res.json())
             .catch(err => err);
     }
-    /*,
-
-    another: function () {
-        return fetch('http://api.horteca.com/api/objects?api_token=wTCDQleCEWCYrrVu', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(res => res['result'])
-            .catch(err => err);
-    }*/
 };
 
 

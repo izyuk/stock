@@ -4,7 +4,7 @@ var path = require('path');
 const fontsFileName = `src/static/fonts/[name].[ext]`;
 
 module.exports = {
-    entry: ['babel-polyfill', __dirname + '/src/index.js'],
+    entry: ['babel-polyfill', __dirname + '/src/sidebar.js'],
     output: {
         path: __dirname + "/build/",
         filename: "index.js"

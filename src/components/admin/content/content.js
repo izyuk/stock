@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import InfoItemsRow from './infoItemsRow';
-import SearchBar from './searchBar/index';
-import SearchResults from './searchResults/index';
+import SearchBar from './searchBar/search-bar';
+import SearchResults from './searchResults/search-results';
 import style from './content.less';
 
 class Content extends Component {

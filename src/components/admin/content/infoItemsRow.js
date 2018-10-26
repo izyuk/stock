@@ -11,8 +11,8 @@ class InfoItemsRow extends Component{
 							<span>icon</span>
 						</div>
 						<div className={style.description}>
-							<p className={style.name}>Videos</p>
-							<p className={style.count}>Was uploaded 123</p>
+							<p className={style.name}>Видео</p>
+							<p className={style.count}>Загружено новых: 12</p>
 						</div>
 					</div>
 					<div className={[style.item, style.tickets].join(' ')}>
@@ -20,8 +20,8 @@ class InfoItemsRow extends Component{
 							<span>icon</span>
 						</div>
 						<div className={style.description}>
-							<p className={style.name}>Tickets</p>
-							<p className={style.count}>Was uploaded 123</p>
+							<p className={style.name}>Тикеты</p>
+							<p className={style.count}>Открытых тикетов: 0</p>
 						</div>
 					</div>
 				</div>

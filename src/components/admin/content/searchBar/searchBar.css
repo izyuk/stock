@@ -1,4 +1,3 @@
-@r _m 'MyriadPro-Cond';
 .wrap {
   width: 100%;
   max-width: 1280px;
@@ -43,6 +42,39 @@
   width: 100%;
   border: none;
   padding-left: 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #909090;
+  font-style: italic;
+}
+.searchRow .search input::-webkit-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #909090;
+  font-style: italic;
+}
+.searchRow .search input::-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #909090;
+  font-style: italic;
+}
+.searchRow .search input:-ms-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #909090;
+  font-style: italic;
+}
+.searchRow .search input:-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #909090;
+  font-style: italic;
 }
 .searchRow .uploadCSV {
   width: 100%;
@@ -59,17 +91,20 @@
   color: #fff;
 }
 .searchRow .uploadCSV p {
-  font-family: 'MyriadPro-Light', sans-serif;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
   text-align: center;
-  width: 100%;
+  width: 200px;
   padding: 10px;
   background: #f1f1f1;
 }
 .searchRow .lang {
   height: 40px;
   display: flex;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .searchRow .lang span {
   display: flex;
@@ -78,14 +113,17 @@
   background: #0B65B1;
   width: 80px;
   color: #fff;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .searchRow .lang > a:not(:last-child) {
   border-right: 1px solid #909090;
 }
 .searchRow .lang a {
-  font-family: 'MyriadPro-Light', sans-serif;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
   padding: 10px;
   background: #f1f1f1;
 }

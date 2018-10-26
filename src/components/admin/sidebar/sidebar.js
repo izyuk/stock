@@ -8,13 +8,16 @@ class Sidebar extends Component{
         return(
             <nav>
             	<span>
-            		<Link to="/control_panel">Control panel</Link>
+            		<Link to="/control_panel">Панель управления</Link>
             	</span>
             	<span className="hasSubmenu">
-            		<Link to="/videos">Videos</Link>
+            		<Link to="/videos">Видео</Link>
             	</span>
+				{/*<span className="hasSubmenu">*/}
+            		{/*<Link to="/videos">Videos</Link>*/}
+            	{/*</span>*/}
             	<span>
-            		<Link to="/tickets">Tickets</Link>
+            		<Link to="/tickets">Тикеты</Link>
             	</span>
             </nav>
         )

@@ -1,4 +1,3 @@
-@r _m 'MyriadPro-Cond';
 .wrap {
   width: 100%;
   max-width: 1280px;
@@ -41,7 +40,7 @@ header.adminWrap {
   object-fit: contain;
 }
 .barWrap .pageInfo .pageName h3 {
-  font-family: 'MyriadPro-Light', sans-serif;
+  font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 28px;
   font-size: 1.75rem;
 }
@@ -85,7 +84,7 @@ header.adminWrap {
   justify-content: center;
 }
 .barWrap .userBar .innerWrap .user .userName p {
-  font-family: 'MyriadPro-Light', sans-serif;
+  font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -102,7 +101,7 @@ header.adminWrap {
   width: 80px;
 }
 .barWrap .userBar .innerWrap span a {
-  font-family: 'MyriadPro-Light', sans-serif;
+  font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 16px;
   font-size: 1rem;
 }

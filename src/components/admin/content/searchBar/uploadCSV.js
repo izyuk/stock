@@ -7,7 +7,7 @@ class UploadCSV extends Component{
 		return(
 				<div className={style.uploadCSV}>
 					<span>icon</span>
-					<p>Upload tags - CSV</p>
+					<p>Загрузить теги   -   CSV</p>
 				</div>
 			)
 	}

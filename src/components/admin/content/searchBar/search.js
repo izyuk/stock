@@ -8,7 +8,7 @@ class Search extends Component{
 				<div className={style.search}>
 					<span>icon</span>
 					<input type="text" 
-						placeholder="Search" />
+						placeholder="Футбол" />
 				</div>
 			)
 	}

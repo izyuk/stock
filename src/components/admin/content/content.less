@@ -1,43 +1,47 @@
 @import '../../../static/exp';
 
-.infoItemsRow{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	padding-bottom: 30px;
-	border-bottom: 1px solid @hr;
-	.item{
-		&:not(:first-child){
-			margin-left: 20px;
-		}
-		flex-basis: 320px;
-		height: 50px;
-		display: flex;
-		align-items: center;
-		&.tickets{
-			.icon{
-				background: @adm_gray;
-			}
-		}
-		.icon{
-			background: @btn_register;
-			width: 80px;
-			height: 50px;
-			color: @w;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 10px;
-		}
-		.description{
-			background: @l_gray;
-			padding: 10px;
-			flex: 1;
-			p{
-				&.name{
-					.font(@r_b, 16);
-				}
-			}
-		}
-	}
+.infoItemsRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @hr;
+  .item {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+    flex-basis: 320px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    &.tickets {
+      .icon {
+        background: @adm_gray;
+      }
+    }
+    .icon {
+      background: @btn_register;
+      width: 80px;
+      height: 50px;
+      color: @w;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+    .description {
+      background: @l_gray;
+      padding: 10px;
+      flex: 1;
+      p {
+        &.name {
+          .font(@m_r, 12);
+          font-weight: bold;
+        }
+        &.count {
+          .font(@m_r, 12);
+        }
+      }
+    }
+  }
 }
