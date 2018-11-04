@@ -11,7 +11,7 @@ export default class MainRouter extends Component {
                        path="/"
                        component={Index}/>
                 <Route exact
-                       path="/admin"
+                       path="/admin/:page"
                        component={Admin}/>
                 {/*To deploy*/}
                 {/*<Route exact*/}

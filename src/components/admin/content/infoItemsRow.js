@@ -3,6 +3,13 @@ import React, { Component } from 'react';
 import style from './content.less';
 
 class InfoItemsRow extends Component{
+    constructor(props){
+        super(props);
+        this.state = {}
+    }
+    componentDidMount(){
+        console.log(this.props.match.params);
+    }
 	render(){
 		return(
 				<div className={style.infoItemsRow}>

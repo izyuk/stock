@@ -22,7 +22,7 @@ class LogoBar extends Component {
                         <div className={style.stateButtons}>
                             <div className={style.form}>
                                 <a href="#" className={style.login}>Sign in</a>
-                                <Link to="/admin">
+                                <Link to="/admin/panel">
                                     <span>Admin</span>
                                 </Link>
                                 <a href="#" className={style.register}>Join now</a>
