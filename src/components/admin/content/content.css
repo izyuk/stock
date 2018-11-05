@@ -47,6 +47,15 @@
   background: #f1f1f1;
   padding: 10px;
   flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.infoItemsRow .item .description div {
+  background: #f1f1f1;
+  padding: 10px;
+  flex: 1;
+  flex-direction: column;
 }
 .infoItemsRow .item .description p.name {
   font-family: 'MyriadPro-Regular', sans-serif;
@@ -58,5 +67,8 @@
   font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 12px;
   font-size: 0.75rem;
+}
+.contentInnerWrap {
+  height: 100%;
 }
 /*# sourceMappingURL=content.css.map */

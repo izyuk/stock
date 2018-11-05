@@ -127,4 +127,18 @@ h3 {
   width: 8px;
   height: 4px;
 }
+.multiEdit {
+  display: flex;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+.multiEdit span {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  background: #c7c7c7;
+  width: 30px;
+  height: 30px;
+}
 /*# sourceMappingURL=searchResults.css.map */

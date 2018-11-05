@@ -1,0 +1,73 @@
+@import '../../../../static/exp';
+
+.uploadWrap{
+  height: 100%;
+}
+.uploadForm{
+  padding: 30px;
+  height: calc(100% - 81px);
+  display: flex;
+  justify-content: flex-end;
+  .form{
+    float: right;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    .head{
+      padding: 20px;
+      h3{
+        .font(@m_r, 24);
+      }
+      p{
+        .font(@m_r, 16);
+        max-width: 150px;
+        width: 100%;
+      }
+      select{
+        width: 100%;
+        background: @w;
+      }
+      div{
+        label{
+          display: flex;
+        }
+        margin-top: 20px;
+      }
+
+      background: @l_gray;
+    }
+    .dropDownArea{
+      width: 100%;
+      height: 100%;
+      max-height: 580px;
+      border: 2px solid @l_gray;
+      div{
+        width: 100% !important;
+        height: 100% !important;
+        border: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 25px 60px;
+        p{
+          color: @hr;
+          .font(@m_r, 24);
+          &.or{
+            .font(@m_r, 20);
+            margin: 20px 0;
+          }
+        }
+        button{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 30px 0;
+          background: @l_gray;
+          border: 1px solid @hr;
+        }
+      }
+    }
+  }
+}

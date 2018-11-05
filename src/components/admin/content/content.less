@@ -33,6 +33,15 @@
       background: @l_gray;
       padding: 10px;
       flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      div{
+        background: @l_gray;
+        padding: 10px;
+        flex: 1;
+        flex-direction: column;
+      }
       p {
         &.name {
           .font(@m_r, 12);
@@ -44,4 +53,8 @@
       }
     }
   }
+}
+
+.contentInnerWrap{
+  height: 100%;
 }
