@@ -11,10 +11,8 @@ class SearchResults extends Component {
 			<section className={style.searchResultsWrap}>
 			<h3>Результаты поиска фотографий и видео по запросу «Футбол»</h3>
 				<Link to="admin/panel/multi-edit"><p className={style.multiEdit}><span>icon</span>Групповое редактирование</p></Link>
-				<table rules="rows">
-					<Thead/>
-					<Tbody/>
-				</table>
+                <Thead/>
+				<Tbody/>
 			</section>
 			)
 	}

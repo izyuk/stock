@@ -24,50 +24,29 @@ h3 {
   width: 100%;
   margin: 60px 0;
 }
-.searchResultsWrap table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow-y: auto;
+.searchResultsWrap .thead {
+  display: grid;
+  grid-template-columns: 30px 40px 65px 100px 85px 80px auto auto 50px 130px 100px 110px 110px;
+  grid-template-rows: 20px;
+  grid-column-gap: 10px;
 }
-.searchResultsWrap table thead tr {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid #909090;
-}
-.searchResultsWrap table thead th {
-  padding: 4px 10px;
-  background: #f1f1f1;
-  margin: 0 5px;
+.searchResultsWrap .thead div {
+  display: flex;
   align-items: center;
-  text-align: center;
-  vertical-align: middle;
-  border: none;
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
+  justify-content: center;
+  background: #f1f1f1;
   font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 12px;
   font-size: 0.75rem;
 }
-.searchResultsWrap table thead th:first-child {
-  margin-left: 0;
-}
-.searchResultsWrap table thead th:first-child select {
+.searchResultsWrap .thead div:first-child select {
   font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 10px;
   font-size: 0.625rem;
   text-transform: uppercase;
   color: #0B65B1;
 }
-.searchResultsWrap table thead th:last-child {
-  margin-right: 0;
-}
-.searchResultsWrap table thead th:first-child {
-  margin-left: 0;
-}
-.searchResultsWrap table thead th:last-child {
-  margin-right: 0;
-}
-.searchResultsWrap table thead th select {
+.searchResultsWrap .thead div select {
   font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 12px;
   font-size: 0.75rem;
@@ -75,15 +54,52 @@ h3 {
   border: none;
   background: transparent;
 }
-.searchResultsWrap table tbody {
+.multiEdit {
+  display: flex;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  width: 100%;
+  max-width: 280px;
+  align-items: center;
+  background: #f1f1f1;
+  margin-bottom: 10px;
+}
+.multiEdit span {
+  display: flex;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  background: #c7c7c7;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.tableContent {
   width: 100%;
 }
-.searchResultsWrap table tbody tr {
-  width: 100%;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid #909090;
+.tableContent .cols {
+  display: grid;
+  grid-template-columns: 30px 40px 65px 100px 85px 80px auto auto 50px 130px 100px 110px 110px;
+  grid-template-rows: 60px;
+  grid-template-areas: "cols cols cols cols cols cols cols cols cols cols cols cols" "tags tags tags tags tags tags tags tags tags tags tags tags";
+  grid-column-gap: 10px;
 }
-.searchResultsWrap table tbody tr td {
+.tableContent .cols div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 5px;
+}
+.tableContent .cols div img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.tableContent .cols div p {
   width: auto;
   margin: 0 5px;
   padding: 10px 5px;
@@ -94,51 +110,58 @@ h3 {
   font-size: 10px;
   font-size: 0.625rem;
 }
-.searchResultsWrap table tbody tr td:first-child {
-  margin-left: 0;
+.tableContent .cols div.lng {
+  flex-direction: column;
 }
-.searchResultsWrap table tbody tr td:last-child {
-  margin-right: 0;
+.tableContent .cols div.lng span {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 10px;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #bfbfbf;
 }
-.searchResultsWrap table tbody tr td img {
-  width: 100%;
-  max-width: 150px;
-  object-fit: contain;
+.tableContent .cols div.lng span.isset {
+  color: #34ae01;
 }
-.searchResultsWrap table tbody tr td.fullWidth {
-  background: #F1F1F1;
+.tableContent .cols div .cols {
+  grid-area: cols;
+}
+.tableContent .fullWidth {
+  grid-area: tags;
+  display: block;
+  background: #f1f1f1;
   font-family: 'MyriadPro-Regular', sans-serif;
   font-size: 10px;
   font-size: 0.625rem;
   color: #505050;
   padding: 0;
 }
-.searchResultsWrap table tbody tr td.fullWidth button {
+.tableContent .fullWidth::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.tableContent .fullWidth p {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  text-align: center;
+  width: calc(100% - 87px);
+}
+.tableContent .fullWidth button {
+  align-self: flex-end;
   border: none;
-  background: #C7C7C7;
+  background: #c7c7c7;
   padding: 3px 0;
   text-indent: 17px;
   float: right;
+  width: 87px;
 }
-.searchResultsWrap table tbody tr td.fullWidth button span {
+.tableContent .fullWidth button span {
   padding: 0 10px 0 12px;
 }
-.searchResultsWrap table tbody tr td.fullWidth button span svg {
+.tableContent .fullWidth button span svg {
   width: 8px;
   height: 4px;
-}
-.multiEdit {
-  display: flex;
-  font-family: 'MyriadPro-Regular', sans-serif;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
-.multiEdit span {
-  font-family: 'MyriadPro-Regular', sans-serif;
-  font-size: 12px;
-  font-size: 0.75rem;
-  background: #c7c7c7;
-  width: 30px;
-  height: 30px;
 }
 /*# sourceMappingURL=searchResults.css.map */

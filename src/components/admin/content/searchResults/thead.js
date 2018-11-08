@@ -9,69 +9,70 @@ class Thead extends Component {
 
     render() {
         return (
-            <thead>
-            <tr>
-                <th className={style.allFilter}>
+            <div className={style.thead}>
+                <div>
+                    <input type="checkbox"/>
+                </div>
+                <div className={style.allFilter}>
                     <select name="" id="">
                         <option value="1"
                                 defaultValue>All
                         </option>
                         <option value="2">Not all</option>
                     </select>
-                </th>
-                <th>
+                </div>
+                <div>
                     <select name="" id="">
                         <option value="1"
                                 defaultValue>Status
                         </option>
                         <option value="2">Status 2</option>
                     </select>
-                </th>
-                <th className={style.preview}>
+                </div>
+                <div className={style.preview}>
                     <label htmlFor="preview">
                         preview
                         <input id="preview" type="checkbox"/>
                     </label>
-                </th>
-                <th>
+                </div>
+                <div>
                     ID code
-                </th>
-                <th>
+                </div>
+                <div>
                     M-release
-                </th>
-                <th className={style.name}>
+                </div>
+                <div className={style.name}>
                     Name
-                </th>
-                <th className={style.release}>
+                </div>
+                <div className={style.release}>
                     <select name="" id="">
                         <option value="1" defaultValue>Release</option>
                         <option value="2">Not release</option>
                     </select>
-                </th>
-                <th>
+                </div>
+                <div>
                     LNG
-                </th>
-                <th>
+                </div>
+                <div>
                     <select name="" id="">
                         <option value="1" defaultValue>Category</option>
                         <option value="2">Not category</option>
                     </select>
-                </th>
-                <th>
+                </div>
+                <div>
                     <select name="" id="">
                         <option value="1" defaultValue>Uploaded</option>
                     </select>
-                </th>
-                <th>
+                </div>
+                <div>
                     <select name="" id="">
                         <option value="1" defaultValue>Publicated</option>
                     </select>
-                </th>
-                <th>
+                </div>
+                <div>
                     Action
-                </th>
-            </tr>
-            </thead>
+                </div>
+            </div>
         )
     }
 }
