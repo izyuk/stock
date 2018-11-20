@@ -1,0 +1,515 @@
+.wrap {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+}
+.adminWrap {
+  width: 100%;
+}
+.adminContent {
+  display: flex;
+  align-items: stretch;
+}
+.contentWrap {
+  width: 100%;
+  padding: 30px 0 0 40px;
+}
+.editWrap {
+  padding-top: 20px;
+  display: flex;
+}
+.editWrap .columnPreview {
+  width: 100%;
+  max-width: 620px;
+  min-width: 620px;
+  margin-right: 20px;
+}
+.editWrap .columnPreview .headCount {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #404040;
+}
+.editWrap .columnPreview .headActions {
+  margin: 24px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.editWrap .columnPreview .headActions .add {
+  background: #f1f1f1;
+  width: 200px;
+  border: none;
+  display: flex;
+}
+.editWrap .columnPreview .headActions .add .icon {
+  width: 30px;
+  height: 30px;
+  background: #c7c7c7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnPreview .headActions .add span {
+  color: #404040;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+}
+.editWrap .columnPreview .headActions .paginationWrap {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  flex-basis: 320px;
+}
+.editWrap .columnPreview .headActions .paginationWrap .show {
+  display: flex;
+  height: 25px;
+  margin-right: 20px;
+  width: 175px;
+  align-items: center;
+}
+.editWrap .columnPreview .headActions .paginationWrap .show span {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.editWrap .columnPreview .headActions .paginationWrap .show select {
+  margin-left: 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 50px;
+  height: 30px;
+  background: #f1f1f1;
+}
+.editWrap .columnPreview .headActions .paginationWrap .pagination {
+  display: flex;
+  height: 25px;
+  align-items: stretch;
+}
+.editWrap .columnPreview .headActions .paginationWrap .pagination .range {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  border: 1px solid #a6a6a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 25px;
+  margin: 0 10px;
+}
+.editWrap .columnPreview .headActions .paginationWrap .pagination button {
+  border: 1px solid #a6a6a6;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.editWrap .columnPreview .items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.editWrap .columnPreview .items .item {
+  width: 100%;
+  height: 220px;
+  flex-basis: 300px;
+  margin-top: 20px;
+  background: #f1f1f1;
+  position: relative;
+}
+.editWrap .columnPreview .items .item .info {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.editWrap .columnPreview .items .item .info .type {
+  width: 30px;
+  height: 30px;
+  background: #f1f1f1;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnPreview .items .item .info .actions {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border: 1px solid transparent;
+  background: #f1f1f1;
+  position: relative;
+  border-radius: 30px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+.editWrap .columnPreview .items .item .info .actions:before {
+  content: '...';
+  height: 2px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+}
+.editWrap .columnEdit {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+}
+.editWrap .columnEdit .editRow {
+  margin-bottom: 40px;
+}
+.editWrap .columnEdit .editRow .head {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.editWrap .columnEdit .editRow .head p {
+  width: 360px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  background: #e6e6e6;
+  margin-right: 40px;
+}
+.editWrap .columnEdit .editRow .head .actionsSide {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+.editWrap .columnEdit .editRow .head .actionsSide button {
+  height: 40px;
+  display: flex;
+  border: none;
+}
+.editWrap .columnEdit .editRow .head .actionsSide button:first-child {
+  width: 240px;
+}
+.editWrap .columnEdit .editRow .head .actionsSide button:last-child {
+  width: 200px;
+}
+.editWrap .columnEdit .editRow .head .actionsSide button span.ico {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background: #0B65B1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnEdit .editRow .head .actionsSide button span:not(.ico) {
+  background: #f1f1f1;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnEdit .editRow .form {
+  display: flex;
+  height: 315px;
+}
+.editWrap .columnEdit .editRow .form .label {
+  width: 80px;
+  height: 100%;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 36px;
+  font-size: 2.25rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: #c7c7c7;
+}
+.editWrap .columnEdit .editRow .form .fields {
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editWrap .columnEdit .editRow .form .fields .row {
+  display: flex;
+}
+.editWrap .columnEdit .editRow .form .fields .row p {
+  width: 80px;
+  min-width: 80px;
+  text-align: right;
+  margin-right: 20px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.editWrap .columnEdit .editRow .form .fields .row input[type=text],
+.editWrap .columnEdit .editRow .form .fields .row textarea {
+  width: 100%;
+  border: 1px solid #a6a6a6;
+  padding: 5px 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #fff;
+}
+.editWrap .columnEdit .editRow .form .fields .row input[type=text] {
+  height: 30px;
+}
+.editWrap .columnEdit .editRow .form .fields .row textarea {
+  height: 70px;
+  resize: none;
+}
+.editWrap .columnEdit .editRow .form .fields .row select {
+  width: 100%;
+  max-width: 300px;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  padding: 5px 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #fff;
+}
+.editWrap .columnEdit .editRow .form .fields .row .mod {
+  width: 100%;
+  align-self: center;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.editWrap .columnEdit .editRow .form .fields .row .mod p {
+  margin: 0;
+  text-align: left;
+  width: auto;
+}
+.editWrap .columnEdit .editRow .form .fields .row .mod input {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 1px solid #a6a6a6;
+}
+.editWrap .columnEdit .editRow .form .fields .row .mod span {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #606060;
+}
+.editWrap .columnEdit .editRow .dimensions {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 20px;
+  display: flex;
+}
+.editWrap .columnEdit .editRow .dimensions p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  align-self: flex-end;
+  width: 100%;
+  max-width: 340px;
+}
+.editWrap .columnEdit .editRow .dimensions .currency {
+  width: 70px;
+  height: 50px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.editWrap .columnEdit .editRow .dimensions .currency p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+.editWrap .columnEdit .editRow .dimensions .currency input {
+  width: 100%;
+  border: 1px solid transparent;
+  height: 20px;
+  text-align: center;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #fff;
+}
+.editWrap .columnEdit .editRow .count {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  background: #f1f1f1;
+}
+.editWrap .columnEdit .editRow .count .models {
+  width: 150px;
+  margin-right: 35px;
+}
+.editWrap .columnEdit .editRow .count .models p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.editWrap .columnEdit .editRow .count .models select {
+  width: 100%;
+  max-width: 300px;
+  height: 30px;
+  border: 1px solid #a6a6a6;
+  padding: 5px 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #fff;
+}
+.editWrap .columnEdit .editRow .count .modelsList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  flex-wrap: wrap;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.editWrap .columnEdit .editRow .count .modelsList .model {
+  width: 180px;
+  flex-basis: 180px;
+  height: 185px;
+  background: #e6e6e6;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editWrap .columnEdit .editRow .count .modelsList .model .name {
+  text-align: center;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.editWrap .columnEdit .editRow .count .modelsList .model .data {
+  display: flex;
+  justify-content: space-between;
+}
+.editWrap .columnEdit .editRow .count .modelsList .model .data .item p {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.editWrap .columnEdit .editRow .count .modelsList .model .data .item .field {
+  width: 70px;
+  height: 100px;
+  border: 1px solid #a6a6a6;
+  background: #fff;
+}
+.editWrap .columnEdit .save {
+  width: 100%;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: flex-end;
+}
+.editWrap .columnEdit .save button {
+  border: none;
+  display: flex;
+  width: 150px;
+  height: 40px;
+}
+.editWrap .columnEdit .save button span.ico {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background: #34ae01;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnEdit .save button span:not(.ico) {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e6e6;
+}
+.editWrap .columnEdit .otherActions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.editWrap .columnEdit .otherActions button {
+  border: none;
+  display: flex;
+  width: 210px;
+  height: 60px;
+}
+.editWrap .columnEdit .otherActions button.publish span.ico {
+  background: #34ae01;
+}
+.editWrap .columnEdit .otherActions button.delay span:not(.ico) {
+  color: #ffaa00;
+}
+.editWrap .columnEdit .otherActions button span.ico {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  background: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.editWrap .columnEdit .otherActions button span:not(.ico) {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e6e6;
+  font-weight: bold;
+}
+.editWrap .columnEdit .otherActions .side {
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.editWrap .columnEdit .otherActions .side button span:not(.ico) {
+  text-align: left;
+  padding-left: 20px;
+}
+/*# sourceMappingURL=edit.css.map */

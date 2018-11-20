@@ -5,6 +5,7 @@ import InfoItemsRow from './infoItemsRow';
 import SearchBar from './searchBar/search-bar';
 import SearchResults from './searchResults/search-results';
 import Uploads from './uploads/uploads';
+import Edit from './edit/edit';
 import style from './content.less';
 
 class Content extends Component {
@@ -30,6 +31,12 @@ class Content extends Component {
                         <div className={style.contentInnerWrap}>
                             <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
                             <Route component={Uploads} />
+                        </div>
+                    </Route>
+                    <Route exact path="/admin/edit">
+                        <div className={style.contentInnerWrap}>
+                            <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
+                            <Route component={Edit} />
                         </div>
                     </Route>
                 </Switch>

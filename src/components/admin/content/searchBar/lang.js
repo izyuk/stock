@@ -7,7 +7,7 @@ class Lang extends Component{
 		return(
 				<div className={style.lang}>
 					<span>LNG</span>
-					<a href="#" 
+					<a href="#"
 						className={style.active}>RU</a>
 					<a href="#">UA</a>
 					<a href="#">EN</a>
