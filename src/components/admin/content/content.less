@@ -3,7 +3,7 @@
 .infoItemsRow {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding-bottom: 30px;
   border-bottom: 1px solid @hr;
   .item {
@@ -57,4 +57,35 @@
 
 .contentInnerWrap{
   height: 100%;
+}
+
+.lang {
+  display: flex;
+  .font(@m_r, 16);
+  background: @l_gray;
+  align-items: center;
+  margin-left: auto;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: @btn_register;
+    width: 80px;
+    color: @w;
+    .font(@m_r, 16);
+  }
+  & > a {
+    &:not(:last-child) {
+      border-right: 1px solid @hr;
+    }
+  }
+  a {
+    &.active {
+      color: @btn_register;
+    }
+    .font(@m_r, 16);
+    height: 40px;
+    padding: 10px;
+
+  }
 }

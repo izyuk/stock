@@ -17,7 +17,7 @@
 .infoItemsRow {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding-bottom: 30px;
   border-bottom: 1px solid #909090;
 }
@@ -70,5 +70,38 @@
 }
 .contentInnerWrap {
   height: 100%;
+}
+.lang {
+  display: flex;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  background: #f1f1f1;
+  align-items: center;
+  margin-left: auto;
+}
+.lang span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0B65B1;
+  width: 80px;
+  color: #fff;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.lang > a:not(:last-child) {
+  border-right: 1px solid #909090;
+}
+.lang a {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  height: 40px;
+  padding: 10px;
+}
+.lang a.active {
+  color: #0B65B1;
 }
 /*# sourceMappingURL=content.css.map */
