@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d37705fa-6d9f-4074-8acc-b0b5be15b489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/breadcrumbs/breadcrumbs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/breadcrumbs/breadcrumbs.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/results/results.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/results/results.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/search/search.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/searchBar/searchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/bannerBar/bannerBar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/bannerBar/bannerBar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/bannerBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/bannerBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/bannerBar/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/search/search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/footer/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/footer/footer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/header/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/header/header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/homeContent/homeContent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/homeContent/homeContent.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/logoBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logoBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logoBar/logoBar.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/popularCategories/popularCategories.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/popularCategories/popularCategories.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/content/content.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/content/content.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/content/edit/edit.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/content/edit/edit.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/content/searchBar/searchBar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/content/searchBar/searchBar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/content/searchResults/searchResults.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/content/searchResults/searchResults.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/content/uploads/uploads.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/content/uploads/uploads.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/footer/footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/footer/footer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/header/header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/header/header.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/admin/sidebar/sidebar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/sidebar/sidebar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/exp.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/exp.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/search/search.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/search/search.less" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +92,8 @@
           <entry key="html" value="1" />
           <entry key="js" value="4677" />
           <entry key="json" value="4" />
-          <entry key="less" value="5025" />
-          <entry key="txt" value="150" />
+          <entry key="less" value="5044" />
+          <entry key="txt" value="169" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -128,8 +101,8 @@
           <entry key="HTML" value="1" />
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="4677" />
-          <entry key="Less" value="5025" />
-          <entry key="PLAIN_TEXT" value="150" />
+          <entry key="Less" value="5044" />
+          <entry key="PLAIN_TEXT" value="169" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -202,8 +175,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/UI/search/search.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+                <state relative-caret-position="368">
+                  <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -339,13 +312,13 @@
         <option value="$PROJECT_DIR$/src/components/UI/breadcrumbs/breadcrumbs.js" />
         <option value="$PROJECT_DIR$/src/components/UI/breadcrumbs/breadcrumbs.less" />
         <option value="$PROJECT_DIR$/src/components/UI/logoBar/index.js" />
-        <option value="$PROJECT_DIR$/src/components/UI/search/search.less" />
         <option value="$PROJECT_DIR$/src/components/UI/search/search.js" />
         <option value="$PROJECT_DIR$/src/components/UI/search/results.js" />
         <option value="$PROJECT_DIR$/src/components/UI/index.js" />
         <option value="$PROJECT_DIR$/src/static/exp.less" />
         <option value="$PROJECT_DIR$/src/components/UI/results/results.js" />
         <option value="$PROJECT_DIR$/src/components/UI/results/results.less" />
+        <option value="$PROJECT_DIR$/src/components/UI/search/search.less" />
       </list>
     </option>
   </component>
@@ -523,7 +496,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544109759694" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544114445909" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="Less" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -578,7 +551,7 @@
       <workItem from="1542712770247" duration="12121000" />
       <workItem from="1542787872896" duration="28000" />
       <workItem from="1542966429051" duration="1912000" />
-      <workItem from="1544099815904" duration="9410000" />
+      <workItem from="1544099815904" duration="10659000" />
     </task>
     <task id="LOCAL-00001" summary="Font changes">
       <created>1540538855133</created>
@@ -615,11 +588,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544101652811</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Search results page">
+      <created>1544109777298</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544109777298</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81424000" />
+    <option name="totallyTimeSpent" value="82673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,7 +614,7 @@
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15314835" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15314835" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -649,7 +629,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294979" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3256785" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3253138" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3294979" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
@@ -676,7 +656,8 @@
     <MESSAGE value="..." />
     <MESSAGE value="Multi-edit page" />
     <MESSAGE value="Established routing for inner pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Established routing for inner pages" />
+    <MESSAGE value="Search results page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search results page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/api/index.js">
@@ -1049,8 +1030,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/search/search.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        <state relative-caret-position="368">
+          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
         </state>
       </provider>
     </entry>
