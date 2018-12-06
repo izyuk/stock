@@ -27,8 +27,8 @@ class Index extends Component {
     render() {
         return (
             <div className={style.mainWrap}>
-                <Route exact path="/" component={Header}/>
-                <Route exact path="/" component={LogoBar}/>
+                <Route component={Header}/>
+                <Route component={LogoBar}/>
                 <Switch>
                     <Route exact path="/">
                         <div>
@@ -37,8 +37,8 @@ class Index extends Component {
                         </div>
                     </Route>
                 </Switch>
-                <Route exact path="/" component={PopularCategories}/>
-                <Route exact path="/" component={Footer}/>
+                <Route component={PopularCategories}/>
+                <Route component={Footer}/>
                 {/*To deploy*/}
                 {/*<Route exact path="/stock" component={Header}/>*/}
                 {/*<Route exact path="/stock" component={LogoBar}/>*/}

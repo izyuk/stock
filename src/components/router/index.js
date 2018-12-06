@@ -7,8 +7,7 @@ export default class MainRouter extends Component {
     render(){
         return(
             <Switch>
-                <Route exact
-                       path="/"
+                <Route path="/"
                        component={Index}/>
                 <Route exact
                        path="/admin/:page"

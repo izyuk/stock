@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import style from './header.less';
 
@@ -17,7 +17,7 @@ class Header extends Component {
                         <div className={style.menu}>
                             {/*<a href="#">Фотографии</a>*/}
                             {/*<Link to="/photos"></Link>*/}
-                            {/*<Link to="/videos"></Link>*/}
+                            <Link to="/videos">Видео</Link>
                             {/*<Link to="/photos"></Link>*/}
                             {/*<a href="#">Видео</a>*/}
                             {/*<a href="#">Редакционные</a>*/}
