@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from './bannerBar.less';
 import Banner from "./banner";
-import Search from "./search";
+import SearchBar from "../searchBar/searchBar";
 import ReviewPlans from './reviewPlans';
 
 
@@ -15,7 +15,7 @@ class BannerBar extends Component {
         return(
             <div className={style.banner}>
                 <Banner/>
-                <Search/>
+                <SearchBar style={style}/>
                 <ReviewPlans/>
             </div>
         )

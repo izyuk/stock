@@ -1,0 +1,123 @@
+@import '../../../static/exp';
+
+.results {
+  width: 100%;
+  .itemsList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    .item{
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      height: 155px;
+      display: flex;
+      position: relative;
+      background: @dummy_gray;
+      img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: contain;
+        margin: auto;
+      }
+      &:hover > .hoveredActions{
+        opacity: 1;
+      }
+      .hoveredActions{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .zoom{
+          position: absolute;
+          top: 8px;
+          right: 8px;
+        }
+        .bottomLine{
+          width: 100%;
+          position: absolute;
+          bottom: 8px;
+          padding: 0 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .time{
+            .font(@m_r, 14);
+            color: @w;
+          }
+          .actions{
+            button{
+              &:not(:last-child){
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottomActions{
+    display: flex;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding-bottom: 40px;
+    border-bottom: 1px solid @dgborder;
+    position: relative;
+    align-items: center;
+    .next{
+      .font(@m_r, 16);
+      width: 199px;
+      height: 39px;
+      border: 1px solid @dgborder_two;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
+    .page{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      span{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      input{
+        width: 30px;
+        margin: 0 3px;
+        text-align: center;
+        .font(@m_r, 14);
+        color: @dtext;
+        font-weight: bold;
+        border: 1px solid @dgborder_two;
+        padding: 3px 0;
+        height: 22px;
+      }
+      .arrows{
+        display: flex;
+        align-items: center;
+        margin-left: 3px;
+        button{
+          width: 24px;
+          height: 24px;
+          border-radius: 24px;
+          border: 1px solid @adm_gray;
+          color: @adm_gray;
+          .font(@m_r, 14);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:first-child{
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}

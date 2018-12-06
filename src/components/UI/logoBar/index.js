@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-
+import SearchBar from '../searchBar/searchBar';
 import style from './logoBar.less';
 
 class LogoBar extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div className={style.coloredBlock}>
                 <div className={style.wrap}>
                     <div className={style.bar}>
@@ -19,33 +19,23 @@ class LogoBar extends Component {
                                 <img src={require('../../../static/img/logo.png')} alt=""/>
                             </span>
                         </Link>
+                        {this.props.path !== '/' ?
+                            <SearchBar style={style}/>
+                            : false}
                         <div className={style.stateButtons}>
                             <div className={style.form}>
                                 <a href="#" className={style.login}>Sign in</a>
-                                <Link to="/admin/panel">
-                                    <span>Admin</span>
-                                </Link>
+                                {this.props.path === '/' ?
+                                    <Link to="/admin/panel">
+                                        <span>Admin</span>
+                                    </Link>
+                                    : false}
                                 <a href="#" className={style.register}>Join now</a>
                             </div>
                         </div>
-
-                        {/*To deploy*/}
-                        {/*<Link to="/stock">*/}
-                            {/*<span className={style.logo}>*/}
-                                {/*<img src={require('../../../static/img/logo.png')} alt=""/>*/}
-                            {/*</span>*/}
-                        {/*</Link>*/}
-                        {/*<div className={style.stateButtons}>*/}
-                            {/*<div className={style.form}>*/}
-                                {/*<a href="#" className={style.login}>Sign in</a>*/}
-                                {/*<Link to="/stock/admin">*/}
-                                    {/*<span>Admin</span>*/}
-                                {/*</Link>*/}
-                                {/*<a href="#" className={style.register}>Join now</a>*/}
-                            {/*</div>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
+
             </div>
         )
     }

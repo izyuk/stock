@@ -26,7 +26,7 @@
 .coloredBlock .bar {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   height: 100%;
 }
 .coloredBlock .bar > a {
@@ -60,5 +60,60 @@
   margin-left: 10px;
   padding: 5px 25px;
   border-color: rgba(0, 0, 0, 0.2);
+}
+.searchWrap {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchWrap .controls {
+  width: 100%;
+  background: #fff;
+  height: 100%;
+  display: flex;
+}
+.searchWrap .controls input {
+  background: #fff;
+  border: 1px solid transparent;
+  flex: 10.25;
+  padding: 10px;
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #95989A;
+}
+.searchWrap .controls input::-webkit-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #95989A;
+}
+.searchWrap .controls input::-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #95989A;
+}
+.searchWrap .controls input:-ms-input-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #95989A;
+}
+.searchWrap .controls input:-moz-placeholder {
+  font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #95989A;
+}
+.searchWrap .controls button {
+  width: 39px;
+  height: 39px;
+  border: 1px solid #0B65B1;
+  background: #0B65B1;
 }
 /*# sourceMappingURL=logoBar.css.map */

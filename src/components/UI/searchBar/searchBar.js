@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import style from './bannerBar.less';
+import style from '../bannerBar/bannerBar.less';
 
-class Search extends Component{
+class SearchBar extends Component{
+    constructor(props){
+        super(props);
+        this.state={}
+    }
+
     render(){
         return(
-            <div className={style.searchWrap}>
-                <div className={style.controls}>
+            <div className={this.props.style.searchWrap}>
+                <div className={this.props.style.controls}>
                     <input type="text" placeholder="Поиск фотографий и видео"/>
                     <button>
                         icon
@@ -16,4 +21,4 @@ class Search extends Component{
     }
 }
 
-export default Search;
+export default SearchBar;
