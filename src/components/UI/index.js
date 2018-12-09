@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Router, Switch, Route, Redirect} from 'react-router-dom';
 import {onLoad} from '../../actions';
 
-import { Api }  from '../../api';
+import {Api} from '../../api';
 
 import style from './style.less';
 import Header from './header';
@@ -15,6 +15,7 @@ import InfoItemsRow from "../admin/content/infoItemsRow";
 import Breadcrumbs from "./breadcrumbs/breadcrumbs";
 import Search from "./search/search";
 import Results from "./results/results";
+import Categories from './categories/categories';
 
 
 class Index extends Component {
@@ -23,7 +24,7 @@ class Index extends Component {
         this.state = {};
     }
 
-    componentWillMount(){
+    componentWillMount() {
         let res = Api.getCats();
         console.log(res);
     }
@@ -47,6 +48,12 @@ class Index extends Component {
                         <div>
                             <Route component={Search}/>
                             <Route component={Results}/>
+                        </div>
+                    </Route>
+                    <Route path='/categories'>
+                        <div>
+                            <Route component={BannerBar}/>
+                            <Route component={Categories}/>
                         </div>
                     </Route>
                 </Switch>

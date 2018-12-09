@@ -1,87 +1,91 @@
 import React, { Component } from 'react';
-import style from './homeContent.less';
+import style from '../homeContent/homeContent.less';
 
 import { Link } from 'react-router-dom';
 
 class Categories extends Component {
     render(){
+        const categories = window.location.pathname === '/categories';
+        console.log(categories);
         return(
+            <div className={style.wrap}>
             <div className={style.categoriesWrap}>
                 <h3>Самые популярные категории спортивных видео</h3>
                 <div className={style.list}>
-                    <div className={style.item}>
+                    <div className={categories ? [style.item, style.cat].join(' ') : style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                     <div className={style.item}>
                         <Link to='/football'>
-                            <span>Футбол</span>
+                            <span className={categories ? style.catName : ''}>Футбол</span>
                             <img src={require('../../../static/img/football.png')} alt=""/>
                         </Link>
                     </div>
                 </div>
+            </div>
             </div>
         )
     }

@@ -14,6 +14,29 @@
       object-fit: cover;
     }
   }
+  .bannerTextWrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .bannerText{
+      p{
+        color: @w;
+        font-weight: bold;
+        text-align: center;
+        &.head{
+          .font(@m_r, 42);
+          margin-bottom: 11px;
+        }
+        .font(@m_r, 24);
+        margin-bottom: 24px;
+      }
+    }
+  }
   .searchWrap{
     position: absolute;
     top: 0;
