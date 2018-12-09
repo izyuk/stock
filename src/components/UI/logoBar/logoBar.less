@@ -11,7 +11,7 @@
   .bar{
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
     height: 100%;
     &>a{
       display: flex;
@@ -46,6 +46,52 @@
           border-color: @borderRegister;
         }
       }
+    }
+  }
+}
+
+.searchWrap{
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .controls{
+    width: 100%;
+    background: @w;
+    height: 100%;
+    display: flex;
+    input{
+      background: @w;
+      border: 1px solid @trans;
+      flex: 10.25;
+      padding: 10px;
+      .font(@m_r, 16);
+      color: @input_color;
+      &::-webkit-input-placeholder {
+        .font(@m_r, 16);
+        color: @input_color;
+      }
+      &::-moz-placeholder {
+        .font(@m_r, 16);
+        color: @input_color;
+      }
+      &:-ms-input-placeholder {
+        .font(@m_r, 16);
+        color: @input_color;
+      }
+      &:-moz-placeholder {
+        .font(@m_r, 16);
+        color: @input_color;
+      }
+    }
+    button{
+      width: 39px;
+      height: 39px;
+      border: 1px solid @btn_register;
+      background: @btn_register;
     }
   }
 }
