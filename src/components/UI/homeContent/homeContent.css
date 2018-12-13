@@ -83,6 +83,9 @@ h3 {
   max-width: 300px;
   margin-bottom: 20px;
 }
+.categoriesWrap .list .item.cat {
+  position: relative;
+}
 .categoriesWrap .list .item a {
   display: flex;
   flex-direction: column;

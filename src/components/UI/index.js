@@ -1,67 +1,80 @@
 import React, {Component} from 'react';
-import {Router, Switch, Route, Redirect} from 'react-router-dom';
-import {onLoad} from '../../actions';
-
-import {Api} from '../../api';
+import {Switch, Route} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {Api} from '../../api/API';
 
 import style from './style.less';
-import Header from './header';
-import LogoBar from './logoBar';
-import BannerBar from './bannerBar';
-import HomeContent from './homeContent';
-import PopularCategories from "./popularCategories";
-import Footer from './footer'
-import InfoItemsRow from "../admin/content/infoItemsRow";
-import Breadcrumbs from "./breadcrumbs/breadcrumbs";
-import Search from "./search/search";
-import Results from "./results/results";
-import Categories from './categories/categories';
+
+import Main from './pages/main';
+import Categories from './pages/categories';
+import Search from './pages/search';
+import Admin from "../admin";
 
 
 class Index extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            categories: ''
+        };
+        this.query = this.query.bind(this);
     }
 
-    componentWillMount() {
-        let res = Api.getCats();
-        console.log(res);
+    async query() {
+        let query = Api.getCats();
+
+        await query.then(res => {
+            let {data} = res.data;
+            console.log(data);
+            this.setState({
+                categories: data
+            });
+        });
+    }
+
+    componentDidMount() {
+        this.query();
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.state.categories !== nextState.categories) {
+            return true
+        }
+        else if (this.props.categories !== nextProps.categories) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    componentDidUpdate() {
+        this.props.updatePagesFunction(this.state.categories);
     }
 
     render() {
         return (
             <div className={style.mainWrap}>
-                <Route component={Header}/>
-                <Route render={(props) => <LogoBar path={window.location.pathname} {...props}/>}/>
-                {window.location.pathname !== '/' ?
-                    <Breadcrumbs/>
-                    : false}
                 <Switch>
-                    <Route exact path="/">
-                        <div>
-                            <Route component={BannerBar}/>
-                            <Route component={HomeContent}/>
-                        </div>
-                    </Route>
-                    <Route path='/search'>
-                        <div>
-                            <Route component={Search}/>
-                            <Route component={Results}/>
-                        </div>
-                    </Route>
-                    <Route path='/categories'>
-                        <div>
-                            <Route component={BannerBar}/>
-                            <Route component={Categories}/>
-                        </div>
-                    </Route>
+                    <Route exact path="/" render={(props) => <Main categoryList={this.state.categories} {...props}/>}/>
+                    <Route exact path='/search/:tag' component={Search}/>
+                    <Route exact path='/categories/:name'
+                           render={(props) => <Categories categoryList={this.state.categories} {...props}/>}/>
+                    <Route exact path="/admin/:page" component={Admin}/>
                 </Switch>
-                <Route component={PopularCategories}/>
-                <Route component={Footer}/>
             </div>
         );
     }
 }
 
-export default Index;
+// export default Index;
+export default connect(
+    state => ({
+        categories: state.categories
+    }),
+    dispatch => ({
+        updatePagesFunction: (categories) => {
+            dispatch({type: "UPDATE_PAGE_LIST", payload: categories})
+        }
+    })
+)(Index)

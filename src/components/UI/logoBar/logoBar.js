@@ -2,10 +2,22 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import SearchBar from '../searchBar/searchBar';
 import style from './logoBar.less';
+import {connect} from 'react-redux';
 
 class LogoBar extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            info: ''
+        }
+    }
+
+    componentDidMount() {
+
+    }
+
+
+    componentDidUpdate(){
 
     }
 
@@ -20,7 +32,7 @@ class LogoBar extends Component {
                             </span>
                         </Link>
                         {this.props.path !== '/' ?
-                            <SearchBar style={style}/>
+                            <SearchBar pageInfo={this.state.info} style={style}/>
                             : false}
                         <div className={style.stateButtons}>
                             <div className={style.form}>
@@ -41,4 +53,9 @@ class LogoBar extends Component {
     }
 }
 
-export default LogoBar;
+export default connect(
+    state => ({
+        page_info: state.page_info
+    }),
+    dispatch => ({})
+)(LogoBar);

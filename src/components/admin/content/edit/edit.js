@@ -87,7 +87,7 @@ class Edit extends Component {
                                 </div>
                                 <div className={style.row}>
                                     <p>Описание</p>
-                                    <textarea name="" id="" cols="30" rows="10"> </textarea>
+                                    <textarea defaultValue=''> </textarea>
                                 </div>
                                 <div className={style.row}>
                                     <p>Категория</p>
@@ -97,7 +97,7 @@ class Edit extends Component {
                                 </div>
                                 <div className={style.row}>
                                     <p>Ключевые слова</p>
-                                    <textarea name="" id="" cols="30" rows="10"> </textarea>
+                                    <textarea defaultValue=''> </textarea>
                                 </div>
                                 <div className={style.row}>
                                     <p>Лицензия</p>

@@ -79,7 +79,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'src'),
         compress: true,
         historyApiFallback: true,
-        port: 9000
+        port: 9090
     },
     plugins: [
         new HtmlWebPackPlugin({

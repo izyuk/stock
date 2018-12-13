@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import style from './search.less';
+import {connect} from 'react-redux';
 
 class Search extends Component {
     constructor(props) {
@@ -7,7 +8,12 @@ class Search extends Component {
         this.state = {}
     }
 
+    componentDidMount(){
+        // this.props.updateInfo(this.props.match.params.tag)
+    }
+
     render() {
+        // console.log(this.props.match.params.tag);
         return (
 
             <div className={style.filters}>
@@ -42,4 +48,13 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default connect(
+    state => ({
+        page_info: state.page_info
+    }),
+    dispatch => ({
+        // updateInfo: (data) => {
+        //     dispatch({type: "UPDATE_PAGE_INFO", payload: data});
+        // }
+    })
+)(Search);

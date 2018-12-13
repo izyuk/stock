@@ -11,7 +11,7 @@ class Header extends Component {
                 <div className={style.barWrap}>
                     <div className={style.pageInfo}>
                         <div className={style.logo}>
-                            <Link to="/admin">
+                            <Link to="/admin/panel">
                                 <img src={require('../../../static/img/logo.png')} alt=""/>
                             </Link>
                         </div>
