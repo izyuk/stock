@@ -55,10 +55,8 @@ class InfoItemsRow extends Component {
                                     </div>
                                     : (this.props.path === '/admin/categories') ?
                                         <div>
-                                            <div>
-                                                <p className={style.name}>Категории</p>
-                                                <p className={style.count}>Всего категорий: 23</p>
-                                            </div>
+                                            <p className={style.name}>Категории</p>
+                                            <p className={style.count}>Всего категорий: 23</p>
                                         </div>
                                         : ''}
 
@@ -139,7 +137,7 @@ class InfoItemsRow extends Component {
                         </div>
                         : (this.props.path === '/admin/categories') ?
                             <div>
-                                <Search />
+                                <Search path={this.props.path}/>
                             </div>
                             : ''}
             </div>

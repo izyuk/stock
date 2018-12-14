@@ -1,6 +1,421 @@
 @import '../../../../static/exp';
 
 .categoriesWrap {
+  margin-top: 30px;
   padding: 20px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: @l_gray;
+  .left {
+    width: 100%;
+    max-width: 540px;
+    .title {
+      .font(@m_r, 24);
+      color: @dtext;
+      margin-bottom: 30px;
+    }
+    .form > div {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    .catName {
+      .head {
+        display: flex;
+        flex-direction: column;
+        .text {
+          .font(@m_r, 16);
+          color: @randText;
+        }
+        input {
+          width: 100%;
+          padding: 5px;
+          background: @w;
+          border: 1px solid @hr;
+        }
+        span {
+          .font(@m_r, 12);
+          margin-top: 5px;
+          color: @dtext;
+        }
+      }
+      .additional {
+        width: 100%;
+        .addRow {
+          width: 100%;
+          .item {
+            width: 100%;
+            display: flex;
+            margin-top: 10px;
+            .label {
+              .font(@m_r, 24);
+              color: @lng_grey;
+              width: 80px;
+              display: flex;
+              justify-content: flex-end;
+              text-transform: uppercase;
+              margin-right: 10px;
+              align-items: center;
+            }
+            input {
+              width: 100%;
+              padding: 5px;
+              background: @w;
+              border: 1px solid @hr;
+            }
+          }
+        }
+      }
+    }
+    .slag {
+      .enterName {
+        display: flex;
+        flex-direction: column;
+        .text {
+          .font(@m_r, 16);
+          color: @randText;
+        }
+        input {
+          width: 100%;
+          padding: 5px;
+          background: @w;
+          border: 1px solid @hr;
+        }
+        span {
+          .font(@m_r, 12);
+          margin-top: 5px;
+          color: @dtext;
+        }
+      }
+      .chooseCat {
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        p {
+          width: 320px;
+          .font(@m_r, 16);
+          color: @randText;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          height: 30px;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          select {
+            width: 100%;
+            padding: 5px;
+            background: @w;
+            border: 1px solid @hr;
+          }
+          span {
+            .font(@m_r, 12);
+            margin-top: 5px;
+            color: @dtext;
+          }
+        }
+      }
+    }
+    .keyWords {
+      & > p {
+        .font(@m_r, 16);
+        color: @randText;
+      }
+      textarea {
+        width: 100%;
+        padding: 5px;
+        height: 50px;
+        background: @w;
+        border: 1px solid @hr;
+        resize: none;
+      }
+      .addRow {
+        .item {
+          width: 100%;
+          display: flex;
+          margin-top: 10px;
+          .label {
+            .font(@m_r, 24);
+            color: @lng_grey;
+            width: 80px;
+            display: flex;
+            justify-content: flex-end;
+            text-transform: uppercase;
+            margin-right: 10px;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+    .image {
+      width: 100%;
+      max-width: 370px;
+      display: flex;
+      align-items: center;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        p {
+          .font(@m_r, 16);
+          color: @randText;
+        }
+        .preview {
+          width: 100px;
+          height: 60px;
+          background: @w;
+          border: 1px solid @hr;
+        }
+      }
+      button {
+        width: 240px;
+        height: 30px;
+        background: @w;
+        border: 1px solid @hr;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .font(@m_r, 14);
+        color: @dtext;
+      }
+      input {
+        width: 0;
+        height: 0;
+        display: block;
+        opacity: 0;
+      }
+    }
+  }
+  .right {
+    width: 100%;
+    max-width: 850px;
+    .head {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      & > p {
+        .font(@m_r, 24);
+        color: @dtext;
+        margin-bottom: 30px;
+      }
+      .paginationWrap {
+        display: flex;
+        align-items: center;
+        height: 30px;
+        width: 100%;
+        flex-basis: 320px;
+        .show {
+          span {
+            .font(@m_r, 16);
+          }
+          select {
+            margin-left: 10px;
+            .font(@m_r, 16);
+            width: 50px;
+            height: 30px;
+            background: @l_gray;
+          }
+          display: flex;
+          height: 25px;
+          margin-right: 20px;
+          width: 175px;
+          align-items: center;
+        }
+        .pagination {
+          display: flex;
+          height: 25px;
+          align-items: stretch;
+          .range {
+            .font(@m_r, 16);
+            border: 1px solid #a6a6a6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 25px;
+            margin: 0 10px;
+          }
+          button {
+            border: 1px solid #a6a6a6;
+            width: 25px;
+            height: 25px;
+            display: block;
+          }
+        }
+      }
+    }
+    .catLists {
+      .treeHead {
+        width: 100%;
+        height: 40px;
+        background: @l_gray;
+        display: flex;
+        border-bottom: 1px solid @hr;
+        .left {
+          flex: 5;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          & > p {
+            .font(@m_r, 14);
+            color: @dtext;
+          }
+          & > .wrapper {
+            width: 100%;
+            max-width: 340px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p {
+              .font(@m_r, 14);
+              color: @dtext;
+            }
+            button {
+              width: 40px;
+              height: 40px;
+              background: @adm_gray;
+              border: none;
+            }
+          }
+        }
+        .right {
+          flex: 4;
+          height: 40px;
+          .slag {
+            width: 100%;
+            display: flex;
+            height: 40px;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+            p {
+              .font(@m_r, 14);
+              color: @dtext;
+            }
+          }
+        }
+      }
+      .tree {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .item {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          border-left: 1px solid @hr;
+          border-bottom: 1px solid @hr;
+          & > div {
+            margin: 5px 0;
+            flex: 5;
+          }
+          .info {
+            width: 100%;
+            border-right: 1px solid @hr;
+            display: flex;
+            & > button {
+              width: 60px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .itemPreview {
+              width: 90px;
+              height: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 100%;
+                object-fit: contain;
+              }
+            }
+            p {
+              width: 100%;
+              padding: 0 10px 0 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              span {
+                .font(@m_r, 14);
+                color: @randText;
+              }
+              button {
+
+              }
+            }
+          }
+          .actions {
+            flex: 4;
+            display: flex;
+            & > div {
+              //margin: 5px 0;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              & > span,
+              & > button {
+                height: 100%;
+                display: flex;
+                align-items: center;
+              }
+              .path {
+                padding-left: 20px;
+                flex: 4;
+                justify-content: flex-start;
+                color: @btn_register;
+                border-right: 1px solid @hr;
+              }
+              .edit {
+                flex: 3;
+                justify-content: center;
+                color: @black;
+                border-right: 1px solid @hr;
+              }
+              .delete {
+                flex: 2;
+                justify-content: center;
+                color: @hr;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      width: 100%;
+      display: flex;
+      margin-top: 10px;
+      justify-content: flex-end;
+      .pagination {
+        display: flex;
+        height: 25px;
+        align-items: stretch;
+        .range {
+          .font(@m_r, 16);
+          border: 1px solid #a6a6a6;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 25px;
+          margin: 0 10px;
+        }
+        button {
+          border: 1px solid #a6a6a6;
+          width: 25px;
+          height: 25px;
+          display: block;
+        }
+      }
+    }
+  }
 }
