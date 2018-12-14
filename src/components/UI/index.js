@@ -17,50 +17,16 @@ class Index extends Component {
         this.state = {
             categories: ''
         };
-        this.query = this.query.bind(this);
-    }
-
-    async query() {
-        let query = Api.getCats();
-
-        await query.then(res => {
-            let {data} = res.data;
-            console.log(data);
-            this.setState({
-                categories: data
-            });
-        });
-    }
-
-    componentDidMount() {
-        this.query();
-
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.state.categories !== nextState.categories) {
-            return true
-        }
-        else if (this.props.categories !== nextProps.categories) {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    componentDidUpdate() {
-        this.props.updatePagesFunction(this.state.categories);
     }
 
     render() {
         return (
             <div className={style.mainWrap}>
                 <Switch>
-                    <Route exact path="/" render={(props) => <Main categoryList={this.state.categories} {...props}/>}/>
+                    <Route exact path='/' component={Main}/>
                     <Route exact path='/search/:tag' component={Search}/>
-                    <Route exact path='/categories/:name'
-                           render={(props) => <Categories categoryList={this.state.categories} {...props}/>}/>
-                    <Route exact path="/admin/:page" component={Admin}/>
+                    <Route exact path='/categories/:name' component={Categories}/>
+                    <Route exact path='/admin/:page' component={Admin}/>
                 </Switch>
             </div>
         );

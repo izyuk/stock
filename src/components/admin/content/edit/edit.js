@@ -7,6 +7,7 @@ class Edit extends Component {
         this.state={}
     }
     render(){
+        debugger;
         return(
             <div className={style.editWrap}>
                 <div className={style.columnPreview}>
@@ -87,7 +88,7 @@ class Edit extends Component {
                                 </div>
                                 <div className={style.row}>
                                     <p>Описание</p>
-                                    <textarea defaultValue=''> </textarea>
+                                    <textarea value=' '> </textarea>
                                 </div>
                                 <div className={style.row}>
                                     <p>Категория</p>
@@ -97,7 +98,7 @@ class Edit extends Component {
                                 </div>
                                 <div className={style.row}>
                                     <p>Ключевые слова</p>
-                                    <textarea defaultValue=''> </textarea>
+                                    <textarea value=' '>  </textarea>
                                 </div>
                                 <div className={style.row}>
                                     <p>Лицензия</p>

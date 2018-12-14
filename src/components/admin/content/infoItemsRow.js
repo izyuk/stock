@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Lang from './searchBar/lang';
 
 import style from './content.less';
+import Search from "./searchBar/search";
 
 class InfoItemsRow extends Component {
     constructor(props) {
@@ -26,7 +27,8 @@ class InfoItemsRow extends Component {
             <div className={style.infoItemsRow}>
                 <div className={style.item}>
                     <div className={style.icon}>
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80px" height="60px" viewBox="0 0 80 60" enableBackground="new 0 0 80 60">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80px"
+                             height="60px" viewBox="0 0 80 60" enableBackground="new 0 0 80 60">
                             <rect fill="#0B65B1" width="80" height="60"/>
                             <path fillRule="evenodd" clipRule="evenodd" fill="#FFFFFF" d="M40,45H25.342C23.504,45,22,43.506,22,41.68V23.135
                                 c0-1.827,1.504-3.321,3.342-3.321h6.007l3.788-3.811C35.764,15.373,36.564,15,37.458,15H40h2.542c0.894,0,1.694,0.373,2.321,1.004
@@ -47,18 +49,26 @@ class InfoItemsRow extends Component {
                                 <div>
                                     <p className={style.name}>Загрузка файлов</p>
                                 </div>
-                                : (this.props.path === '/admin/edit') ?
+                                : (this.props.path === '/admin/uploading') ?
                                     <div>
                                         <p className={style.name}>Групповое редактирование</p>
                                     </div>
-                                    : ''}
+                                    : (this.props.path === '/admin/categories') ?
+                                        <div>
+                                            <div>
+                                                <p className={style.name}>Категории</p>
+                                                <p className={style.count}>Всего категорий: 23</p>
+                                            </div>
+                                        </div>
+                                        : ''}
 
                     </div>
                 </div>
                 {this.props.path === '/admin/panel' ?
                     <div className={[style.item, style.tickets].join(' ')}>
                         <div className={style.icon}>
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80px" height="60px" viewBox="0 0 80 60" enableBackground="new 0 0 80 60">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="80px" height="60px" viewBox="0 0 80 60" enableBackground="new 0 0 80 60">
                                 <rect fill="#C7C7C7" width="80" height="60"/>
                                 <path fill="#FFFFFF" d="M36.047,46.283l1.725-6.896c0.717,0.171,1.46,0.271,2.229,0.271s1.512-0.1,2.229-0.271l1.725,6.896
                                     c-1.269,0.308-2.592,0.476-3.953,0.476S37.315,46.591,36.047,46.283z M43.953,13.717l-1.725,6.896
@@ -110,7 +120,7 @@ class InfoItemsRow extends Component {
                                     c0.128-0.146,0.254-0.293,0.377-0.442c0.004-0.006,0.005-0.013,0.01-0.019c0.475-0.577,0.91-1.187,1.312-1.82
                                     c0.011-0.015,0.026-0.026,0.036-0.043c0.044-0.071,0.38-0.631,0.479-0.82c0.263-0.472,0.504-0.957,0.724-1.452
                                     c0.167-0.365,0.187-0.395,0.303-0.725c0.216-0.55,0.404-1.111,0.566-1.687C57.326,34.863,57.331,34.859,57.332,34.854z"/>
-                                </svg>
+                            </svg>
                         </div>
                         <div className={style.description}>
                             <div>
@@ -127,7 +137,11 @@ class InfoItemsRow extends Component {
                             <a href="#">EN</a>
                             <a href="#">DE</a>
                         </div>
-                        : ''}
+                        : (this.props.path === '/admin/categories') ?
+                            <div>
+                                <Search />
+                            </div>
+                            : ''}
             </div>
         )
     }

@@ -5,37 +5,42 @@ import {connect} from 'react-redux';
 import Title from './title';
 import RandomPosts from './randPosts';
 import Categories from '../categories/categories';
+import {Api} from "../../../api/API";
 
 class HomeContent extends Component {
     constructor(props){
         super(props);
         this.state={
-            categoriesList: ''
-        }
+            categories: ''
+        };
+        this.query = this.query.bind(this);
     }
-    componentDidMount(){
-        console.log(this.props.categories.pages);
-        this.setState({
-            categoriesList: this.props.categories.pages
+
+    async query() {
+        let query = Api.getCats();
+        await query.then(res => {
+            let {data} = res.data;
+            this.setState({
+                categories: data
+            });
+            this.props.updatePagesFunction(this.state.categories);
         });
-        this.props.categories.pages && this.props.categories.pages ? console.log('qweqwe') : console.log('123123');
+    }
+
+    componentDidMount(){
+        this.query();
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.state.categoriesList !== nextState.categoriesList) {
+        if (this.state.categories !== nextState.categories) {
             return true
-        }
-        /*else if (this.props.categories !== nextProps.categories) {
-            return true
-        }*/ else {
+        } else {
             return false
         }
     }
 
     componentDidUpdate() {
-        console.log(this.state.categoriesList);
-        console.log(this.props.categories.pages);
-        // this.props.updatePagesFunction(this.state.categories);
+        console.log('Home Content component is Updated \n', this.state.categories);
     }
 
     render(){
@@ -45,7 +50,7 @@ class HomeContent extends Component {
                     <Title/>
                     <RandomPosts/>
                 </div>
-                <Categories/>
+                <Categories list={this.state.categories}/>
             </div>
         )
     }

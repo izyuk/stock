@@ -46,11 +46,14 @@ class Sidebar extends Component {
             	<span>
             		<Link to="/admin/panel">Панель управления</Link>
             	</span>
-                    <span className="hasSubmenu">
+                <span className="hasSubmenu">
             		<Link to="/admin/videos">Видео</Link>
             	</span>
-                    <span>
+                <span>
             		<Link to="/admin/uploading">Загрузка файлов</Link>
+            	</span>
+                <span>
+            		<Link to="/admin/categories">Категории</Link>
             	</span>
                 </nav>
                 {window.location.pathname === '/admin/uploading' ?

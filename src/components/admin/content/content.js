@@ -6,16 +6,19 @@ import SearchBar from './searchBar/search-bar';
 import SearchResults from './searchResults/search-results';
 import Uploads from './uploads/uploads';
 import Edit from './edit/edit';
+import Categories from './categories/categories';
 import style from './content.less';
 
 class Content extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {};
     }
-    componentDidMount(){
+
+    componentDidMount() {
         console.log('content', window.location.pathname);
     }
+
     render() {
         return (
             <section className={style.contentWrap}>
@@ -30,14 +33,21 @@ class Content extends Component {
                     <Route exact path="/admin/uploading">
                         <div className={style.contentInnerWrap}>
                             <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
-                            <Route component={Uploads} />
+                            <Route component={Uploads}/>
                         </div>
                     </Route>
                     <Route exact path="/admin/edit">
                         <div className={style.contentInnerWrap}>
                             <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
-                            <Route component={Edit} />
+                            <Route component={Edit}/>
                         </div>
+                    </Route>
+                    <Route exact path="/admin/categories">
+                        <div>
+                            <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
+                            <Route component={Categories}/>
+                        </div>
+
                     </Route>
                 </Switch>
             </section>
