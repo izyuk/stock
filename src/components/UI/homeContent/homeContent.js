@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import Title from './title';
 import RandomPosts from './randPosts';
 import Categories from '../categories/categories';
-import {Api} from "../../../api/API";
+import {getCats} from "../../../api/API";
 
 class HomeContent extends Component {
     constructor(props){
@@ -17,7 +17,7 @@ class HomeContent extends Component {
     }
 
     async query() {
-        let query = Api.getCats();
+        let query = getCats();
         await query.then(res => {
             let {data} = res.data;
             this.setState({

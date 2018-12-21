@@ -148,27 +148,72 @@ class Uploads extends Component {
                 'Accept': 'application/json',
                 'api-token': API_TOKEN
             });
-            let formData = new FormData();
+            // let formData = new FormData();
             console.log('files \n', files);
-            formData.append('videos[0]', files[0]);
-            console.log('formData \n', formData);
-            return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, {
-                mode: 'no-cors',
-                headers: myHeaders,
-                onUploadProgress: progressEvent => {
-                    let progress = Math.round(progressEvent.loaded / progressEvent.total * 100);
-                    console.log('Upload progress: ', progress + '%')
-                    // files.progress = progress;
-                    this.setState({
-                        fileStatus: {files, progress}
-                    });
-                    this.props.uploadingInfo({files, progress});
-                }
-            })
-                .then(res => res)
-                .catch(err => console.warn('In uploading API method\n', err));
-        };
+            // files.map((item, i) => {
+            //     console.log(item);
+            //     formData.append(`videos[${i}]`, item);
+            // });
+            // formData.append('videos[0]', files[0]);
+            // console.log('formData \n', formData);
 
+            const myUploadProgress = (myFileId) => (progress) => {
+                let percentage = Math.round(progress.loaded / progress.total * 100);
+                console.log(myFileId);
+                console.log(percentage);
+
+                let state = this.state.fileStatus.push([myFileId, percentage]);
+
+                this.setState(state);
+                this.props.uploadingInfo([myFileId, percentage]);
+
+            };
+
+            files.map((file, i) => {
+                let formData = new FormData();
+                formData.append(`videos[${i}]`, file);
+                let config = {
+                    mode: 'no-cors',
+                    headers: myHeaders,
+                    onUploadProgress: myUploadProgress(file)
+                };
+
+                return axios.post(`${URL}/public/api/releases/${releases}/videos`, file, config)
+                    .then(res => res)
+                    .catch(err => console.warn('In uploading API method\n', err));
+            });
+
+            // for (let i=0; i<files.length; i++) {
+            //     let formData = new FormData();
+            //     formData.append(`videos[${i}]`, files[i]);
+            //     let config = {
+            //         mode: 'no-cors',
+            //         headers: myHeaders,
+            //         onUploadProgress: myUploadProgress(files[i])
+            //     };
+            //
+            //     return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, config)
+            //         .then(res => res)
+            //         .catch(err => console.warn('In uploading API method\n', err));
+            // }
+
+            // return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, {
+            //     mode: 'no-cors',
+            //     headers: myHeaders,
+            //
+            //     // onUploadProgress: progressEvent => {
+            //     //     let progress = Math.round(progressEvent.loaded / progressEvent.total * 100);
+            //     //     console.log('Upload progress: ', progress + '%')
+            //     //     // files.progress = progress;
+            //     //     this.setState({
+            //     //         fileStatus: {files, progress}
+            //     //     });
+            //     //     this.props.uploadingInfo({files, progress});
+            //     // }
+            // })
+            //     .then(res => res)
+            //     .catch(err => console.warn('In uploading API method\n', err));
+        };
 
 
         fileUploads(this.state.slugID, files);
@@ -179,7 +224,7 @@ class Uploads extends Component {
             return true
         } else if (this.state.updating !== nextState.updating) {
             return true
-        }  else if (this.state.fileStatus !== nextState.fileStatus) {
+        } else if (this.state.fileStatus !== nextState.fileStatus) {
             this.props.uploadingInfo(nextState.fileStatus);
             return true
         } else {
