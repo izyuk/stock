@@ -33,7 +33,7 @@ class Content extends Component {
                     <Route exact path="/admin/uploading">
                         <div className={style.contentInnerWrap}>
                             <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
-                            <Route component={Uploads}/>
+                            <Route render={(props) => <Uploads uploadingInfo={this.props.uploadingInfo} {...props}/>}/>
                         </div>
                     </Route>
                     <Route exact path="/admin/edit">

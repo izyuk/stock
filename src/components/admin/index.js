@@ -11,11 +11,32 @@ import InfoItemsRow from "./content/infoItemsRow";
 class Admin extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            uploadingInfo: ''
+        };
+        this.transferUploadingData = this.transferUploadingData.bind(this);
     }
 
     componentDidMount() {
         console.log('content', window.location.pathname);
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        if(this.state.uploadingInfo !== nextState.uploadingInfo){
+            return true
+        } else {
+            return false
+        }
+    }
+
+    componentDidUpdate(){
+        console.log('Admin main component updated with uploadingInfo', this.state.uploadingInfo);
+    }
+
+    transferUploadingData(data){
+        this.setState({
+            uploadingInfo: data
+        })
     }
 
     render() {
@@ -23,8 +44,8 @@ class Admin extends Component {
             <div>
                 <Header/>
                 <div className={style.adminContent}>
-                    <Sidebar path={window.location.pathname}/>
-                    <Content page={this.props.page}/>
+                    <Sidebar path={window.location.pathname} uploadingInfo={this.state.uploadingInfo}/>
+                    <Content page={this.props.page} uploadingInfo={this.transferUploadingData}/>
                 </div>
                 <Footer/>
             </div>

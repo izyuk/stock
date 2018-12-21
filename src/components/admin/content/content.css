@@ -104,4 +104,13 @@
 .lang a.active {
   color: #0B65B1;
 }
+.searchRow {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.searchRow > div:not(:first-child) {
+  margin-left: 20px;
+}
 /*# sourceMappingURL=content.css.map */
