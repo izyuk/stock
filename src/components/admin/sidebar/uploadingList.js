@@ -34,7 +34,7 @@ class UploadingList extends Component {
 
     componentDidUpdate() {
         this.setState({
-            list: this.props.uploadingInfo.files
+            list: this.props.uploadingInfo
         });
         this.setState({
             uploadStatus: this.props.uploadingInfo.progress
@@ -58,32 +58,32 @@ class UploadingList extends Component {
                     </ul>
                 </div>
                 <ul className={style.items}>
-                    {list ?
-                        list.map((item, i) => {
-                            console.log(item);
-                            console.log('------------uploadStatus', uploadStatus);
-                            let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-                            if (item.size === 0) return '0 Byte';
-                            let val = parseInt(Math.floor(Math.log(item.size) / Math.log(1024)));
-                            let resultSize = Math.round(item.size / Math.pow(1024, val), 2) + ' ' + sizes[val];
-                            return (
-                                <li key={i}>
-                                    <p className={style.name}>
-                                        {item.name}
-                                    </p>
-                                    <div className={style.fileInfo}>
-                                        <span className={style.size}>{resultSize}</span>
-                                        <div className={style.progressBar}>
-                                            <span style={{width: `${uploadStatus}%`}}>&nbsp;</span>
-                                        </div>
-                                        <a href="javascript:void(0)">&times;</a>
-                                    </div>
-                                </li>
-                            )
-                        })
+                    {/*{list ?*/}
+                        {/*list.map((item, i) => {*/}
+                            {/*console.log(item);*/}
+                            {/*console.log('------------uploadStatus', uploadStatus);*/}
+                            {/*let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];*/}
+                            {/*if (item.size === 0) return '0 Byte';*/}
+                            {/*let val = parseInt(Math.floor(Math.log(item.size) / Math.log(1024)));*/}
+                            {/*let resultSize = Math.round(item.size / Math.pow(1024, val), 2) + ' ' + sizes[val];*/}
+                            {/*return (*/}
+                                {/*<li key={i}>*/}
+                                    {/*<p className={style.name}>*/}
+                                        {/*{item.name}*/}
+                                    {/*</p>*/}
+                                    {/*<div className={style.fileInfo}>*/}
+                                        {/*<span className={style.size}>{resultSize}</span>*/}
+                                        {/*<div className={style.progressBar}>*/}
+                                            {/*<span style={{width: `${uploadStatus}%`}}>&nbsp;</span>*/}
+                                        {/*</div>*/}
+                                        {/*<a href="javascript:void(0)">&times;</a>*/}
+                                    {/*</div>*/}
+                                {/*</li>*/}
+                            {/*)*/}
+                        {/*})*/}
 
-                        : <span></span>
-                    }
+                        {/*: <span></span>*/}
+                    {/*}*/}
 
 
                     {/*<UploadingProcess/> && <UploadingProcess/>*/}

@@ -14,7 +14,7 @@ class Uploads extends Component {
             updating: true,
             slugs: [],
             slugID: '',
-            fileStatus: ''
+            fileStatus: {}
         };
         this.onDrop = this.onDrop.bind(this);
         this.query = this.query.bind(this);
@@ -157,32 +157,34 @@ class Uploads extends Component {
             // formData.append('videos[0]', files[0]);
             // console.log('formData \n', formData);
 
-            const myUploadProgress = (myFileId) => (progress) => {
+            const myUploadProgress = (myFileId, i) => (progress) => {
                 let percentage = Math.round(progress.loaded / progress.total * 100);
-                console.log(myFileId);
-                console.log(percentage);
 
-                let state = this.state.fileStatus.push([myFileId, percentage]);
 
-                this.setState(state);
-                this.props.uploadingInfo([myFileId, percentage]);
+                // let state = this.state.fileStatus.push([myFileId, percentage]);
 
+                this.state.fileStatus[i] = {myFileId, percentage};
+                this.props.uploadingInfo(this.state.fileStatus);
+                console.log('fileStatus', this.state.fileStatus);
+                return this.state.fileStatus;
             };
-
+            let array = [];
             files.map((file, i) => {
                 let formData = new FormData();
                 formData.append(`videos[${i}]`, file);
                 let config = {
                     mode: 'no-cors',
                     headers: myHeaders,
-                    onUploadProgress: myUploadProgress(file)
+                    onUploadProgress: myUploadProgress(file, i)
                 };
+
+                array[i] = this.state.fileStatus[i];
 
                 return axios.post(`${URL}/public/api/releases/${releases}/videos`, file, config)
                     .then(res => res)
                     .catch(err => console.warn('In uploading API method\n', err));
             });
-
+            console.log('array', array);
             // for (let i=0; i<files.length; i++) {
             //     let formData = new FormData();
             //     formData.append(`videos[${i}]`, files[i]);

@@ -25,7 +25,7 @@ class Admin extends Component {
         if(this.state.uploadingInfo !== nextState.uploadingInfo){
             return true
         } else {
-            return false
+            return true
         }
     }
 
@@ -34,6 +34,9 @@ class Admin extends Component {
     }
 
     transferUploadingData(data){
+        // console.log(data, i);
+        // let newState = [];
+        // newState[i] = data;
         this.setState({
             uploadingInfo: data
         })
