@@ -6,6 +6,8 @@ import {getReleases} from "../../../../api/API";
 import sha1 from "sha1";
 import axios from "axios";
 
+import {connect} from 'react-redux';
+
 class Uploads extends Component {
     constructor(props) {
         super(props);
@@ -148,27 +150,14 @@ class Uploads extends Component {
                 'Accept': 'application/json',
                 'api-token': API_TOKEN
             });
-            // let formData = new FormData();
             console.log('files \n', files);
-            // files.map((item, i) => {
-            //     console.log(item);
-            //     formData.append(`videos[${i}]`, item);
-            // });
-            // formData.append('videos[0]', files[0]);
-            // console.log('formData \n', formData);
 
             const myUploadProgress = (myFileId, i) => (progress) => {
                 let percentage = Math.round(progress.loaded / progress.total * 100);
 
-
-                // let state = this.state.fileStatus.push([myFileId, percentage]);
-
                 this.state.fileStatus[i] = {myFileId, percentage};
-                this.props.uploadingInfo(this.state.fileStatus);
-                console.log('fileStatus', this.state.fileStatus);
-                return this.state.fileStatus;
+                this.props.transferUploadingData(this.state.fileStatus);
             };
-            let array = [];
             files.map((file, i) => {
                 let formData = new FormData();
                 formData.append(`videos[${i}]`, file);
@@ -177,44 +166,10 @@ class Uploads extends Component {
                     headers: myHeaders,
                     onUploadProgress: myUploadProgress(file, i)
                 };
-
-                array[i] = this.state.fileStatus[i];
-
-                return axios.post(`${URL}/public/api/releases/${releases}/videos`, file, config)
+                return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, config)
                     .then(res => res)
                     .catch(err => console.warn('In uploading API method\n', err));
             });
-            console.log('array', array);
-            // for (let i=0; i<files.length; i++) {
-            //     let formData = new FormData();
-            //     formData.append(`videos[${i}]`, files[i]);
-            //     let config = {
-            //         mode: 'no-cors',
-            //         headers: myHeaders,
-            //         onUploadProgress: myUploadProgress(files[i])
-            //     };
-            //
-            //     return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, config)
-            //         .then(res => res)
-            //         .catch(err => console.warn('In uploading API method\n', err));
-            // }
-
-            // return axios.post(`${URL}/public/api/releases/${releases}/videos`, formData, {
-            //     mode: 'no-cors',
-            //     headers: myHeaders,
-            //
-            //     // onUploadProgress: progressEvent => {
-            //     //     let progress = Math.round(progressEvent.loaded / progressEvent.total * 100);
-            //     //     console.log('Upload progress: ', progress + '%')
-            //     //     // files.progress = progress;
-            //     //     this.setState({
-            //     //         fileStatus: {files, progress}
-            //     //     });
-            //     //     this.props.uploadingInfo({files, progress});
-            //     // }
-            // })
-            //     .then(res => res)
-            //     .catch(err => console.warn('In uploading API method\n', err));
         };
 
 
@@ -227,7 +182,7 @@ class Uploads extends Component {
         } else if (this.state.updating !== nextState.updating) {
             return true
         } else if (this.state.fileStatus !== nextState.fileStatus) {
-            this.props.uploadingInfo(nextState.fileStatus);
+            // this.props.transferUploadingData(nextState.fileStatus);
             return true
         } else {
             return false

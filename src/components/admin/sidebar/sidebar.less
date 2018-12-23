@@ -37,4 +37,60 @@ nav {
   }
 }
 
+.downloadsList {
+  height: auto;
+  width: 100%;
+  background: #d8d8d8;
+  .uploadingInfo {
+    padding: 20px;
+    ul {
+      li {
+        line-height: 1.71;
+      }
+      & > li {
+        .font(@m_r, 16);
+        & > ul {
+          padding-left: 10px;
+          & > li {
+            .font(@m_r, 14);
+          }
+        }
+      }
+    }
+  }
+  .items {
+    background: @l_gray;
+    width: 100%;
+    height: auto;
+    li {
+      border-bottom: 4px solid #d8d8d8;
+      padding: 3px 7px;
+      .name {
+        .font(@m_r, 14);
+        margin-bottom: 5px;
+      }
+      .fileInfo {
+        display: flex;
+        justify-content: space-between;
+        .size {
+          .font(@m_r, 12);
+          color: #808080;
+        }
+        .progressBar {
+          border: 1px solid #d8d8d8;
+          background: @w;
+          width: 220px;
+          height: 15px;
+          span {
+            background: #71d448;
+            height: 100%;
+            display: flex;
+          }
+        }
+        a {
 
+        }
+      }
+    }
+  }
+}

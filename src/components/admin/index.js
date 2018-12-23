@@ -12,7 +12,7 @@ class Admin extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            uploadingInfo: ''
+            uploadingInfo: {}
         };
         this.transferUploadingData = this.transferUploadingData.bind(this);
     }
@@ -30,16 +30,17 @@ class Admin extends Component {
     }
 
     componentDidUpdate(){
-        console.log('Admin main component updated with uploadingInfo', this.state.uploadingInfo);
+        // console.log('Admin main component updated with uploadingInfo', this.state.uploadingInfo);
+        // console.log(this.state.uploadingInfo)
     }
 
     transferUploadingData(data){
-        // console.log(data, i);
+        // console.log(data);
         // let newState = [];
         // newState[i] = data;
         this.setState({
             uploadingInfo: data
-        })
+        });
     }
 
     render() {
@@ -48,7 +49,7 @@ class Admin extends Component {
                 <Header/>
                 <div className={style.adminContent}>
                     <Sidebar path={window.location.pathname} uploadingInfo={this.state.uploadingInfo}/>
-                    <Content page={this.props.page} uploadingInfo={this.transferUploadingData}/>
+                    <Content page={this.props.page} transferUploadingData={this.transferUploadingData}/>
                 </div>
                 <Footer/>
             </div>

@@ -16,7 +16,7 @@ class Content extends Component {
     }
 
     componentDidMount() {
-        console.log('content', window.location.pathname);
+        // console.log('content', window.location.pathname);
     }
 
     render() {
@@ -33,7 +33,7 @@ class Content extends Component {
                     <Route exact path="/admin/uploading">
                         <div className={style.contentInnerWrap}>
                             <Route render={(props) => <InfoItemsRow path={window.location.pathname} {...props}/>}/>
-                            <Route render={(props) => <Uploads uploadingInfo={this.props.uploadingInfo} {...props}/>}/>
+                            <Route render={(props) => <Uploads transferUploadingData={this.props.transferUploadingData} {...props}/>}/>
                         </div>
                     </Route>
                     <Route exact path="/admin/edit">

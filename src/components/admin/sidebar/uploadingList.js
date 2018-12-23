@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-import {fileUploads} from '../../../api/API';
+// import {fileUploads} from '../../../api/API';
 
 import style from './uploadingList.less';
+import {connect} from "react-redux";
 
 
 class UploadingList extends Component {
@@ -11,13 +12,12 @@ class UploadingList extends Component {
         super(props);
         this.state = {
             list: '',
-            uploadStatus: ''
         };
         this.downloadsList = React.createRef();
     }
 
     componentDidMount() {
-        console.log(this.props.uploadingInfo);
+        console.log(this.props.uploadingInfo)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -25,26 +25,20 @@ class UploadingList extends Component {
             return true
         } else if (this.props.uploadingInfo !== nextProps.uploadingInfo) {
             return true
-        } else if (this.props.progress !== nextProps.progress) {
-            return true
         } else {
             return false
         }
     }
 
     componentDidUpdate() {
-        this.setState({
-            list: this.props.uploadingInfo
-        });
-        this.setState({
-            uploadStatus: this.props.uploadingInfo.progress
-        });
-        console.log('UploadingListComponentDidUpdate', this.state.list)
+        // console.log(this.state.list);
+        // console.log(this.props.file)
     }
 
     render() {
-        let {list, uploadStatus} = this.state && this.state;
-        console.log(list);
+        // let { uploadingInfo } = this.props;
+        // console.log('UploadingList', uploadingInfo);
+        console.log('UploadingList', this.props.uploadingInfo);
         return (
             <div ref={this.downloadsList} className={style.downloadsList}>
                 <div className={style.uploadingInfo}>
@@ -59,22 +53,22 @@ class UploadingList extends Component {
                 </div>
                 <ul className={style.items}>
                     {/*{list ?*/}
-                        {/*list.map((item, i) => {*/}
-                            {/*console.log(item);*/}
-                            {/*console.log('------------uploadStatus', uploadStatus);*/}
+                        {/*Object.keys(list).map((item, i) => {*/}
+                            {/*console.log(list[item]);*/}
+                            {/*console.log(i);*/}
                             {/*let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];*/}
-                            {/*if (item.size === 0) return '0 Byte';*/}
-                            {/*let val = parseInt(Math.floor(Math.log(item.size) / Math.log(1024)));*/}
-                            {/*let resultSize = Math.round(item.size / Math.pow(1024, val), 2) + ' ' + sizes[val];*/}
+                            {/*if (list[item].myFileId.size === 0) return '0 Byte';*/}
+                            {/*let val = parseInt(Math.floor(Math.log(list[item].myFileId.size) / Math.log(1024)));*/}
+                            {/*let resultSize = Math.round(list[item].myFileId.size / Math.pow(1024, val), 2) + ' ' + sizes[val];*/}
                             {/*return (*/}
                                 {/*<li key={i}>*/}
                                     {/*<p className={style.name}>*/}
-                                        {/*{item.name}*/}
+                                        {/*{list[item].myFileId.name}*/}
                                     {/*</p>*/}
                                     {/*<div className={style.fileInfo}>*/}
                                         {/*<span className={style.size}>{resultSize}</span>*/}
                                         {/*<div className={style.progressBar}>*/}
-                                            {/*<span style={{width: `${uploadStatus}%`}}>&nbsp;</span>*/}
+                                            {/*<span style={{width: `${list[item].percentage}%`}}>&nbsp;</span>*/}
                                         {/*</div>*/}
                                         {/*<a href="javascript:void(0)">&times;</a>*/}
                                     {/*</div>*/}
@@ -119,4 +113,11 @@ class UploadingList extends Component {
 //     }
 // };
 
-export default UploadingList;
+// export default UploadingList;
+export default connect(
+    state => ({
+        file: state.file
+    }),
+    dispatch => ({})
+)
+(UploadingList);
