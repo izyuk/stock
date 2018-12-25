@@ -1,13 +1,47 @@
 import React, {Component} from 'react';
 import style from './categories.less';
 
+import {getCats} from '../../../../api/API';
+
 class Categories extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            categoriesList: {}
+        };
+        this.getCategoriesList = this.getCategoriesList.bind(this);
+    }
+
+    async getCategoriesList(level, parent_id) {
+        let query = getCats(level, parent_id);
+        await query.then(res => {
+            let {data} = res.data;
+            console.log(data);
+            if (level === 0) this.state.categoriesList = data;
+            else this.state[`children_${level}`] = data;
+        });
+        this.forceUpdate();
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.state.categoriesList !== nextState.categoriesList) {
+            return true
+        } else {
+            return true
+        }
+    }
+
+    componentDidMount() {
+        this.getCategoriesList(0);
+    }
+
+    componentDidUpdate() {
+
     }
 
     render() {
+        let list = this.state.categoriesList && this.state.categoriesList;
+        console.log(this.state);
         return (
             <div className={style.categoriesWrap}>
                 <div className={style.left}>
@@ -121,28 +155,21 @@ class Categories extends Component {
                             </div>
                         </div>
                         <div className={style.tree}>
-                            <div className={style.item}>
-                                <div>
-                                    <div className={style.info}>
-                                        <button className={style.changeOrder} type="button">ico</button>
-                                        <div className={style.itemPreview}>
-                                            <img src="" alt=""/>
-                                        </div>
-                                        <p>
-                                            <span>Парашютный спорт</span>
-                                            <button className={style.up} type="button">icon</button>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={style.actions}>
-                                    <div>
-                                        <span className={style.path}>/parachute</span>
-                                        <button className={style.edit} type="button">Редактировать</button>
-                                        <button className={style.delete} type="button">Удалить</button>
-                                    </div>
-
-                                </div>
-                            </div>
+                            {list ?
+                                Object.keys(list).map((item, i) => {
+                                    let {id, level, parent_id, title, slug, preview} = list[item];
+                                    console.log(list[item]);
+                                    return (
+                                        <Item id={id}
+                                              level={level}
+                                              parent_id={parent_id}
+                                              title={title}
+                                              slug={slug}
+                                              preview={preview}
+                                              key={i}/>
+                                    )
+                                }) : 'Categories are not defined !'
+                            }
                         </div>
                     </div>
                     <div className={style.footer}>
@@ -157,5 +184,35 @@ class Categories extends Component {
         )
     }
 }
+
+export const Item = ({id, level, parent_id, title, slug, preview}) => {
+    return (
+        <div className={[style.item, level > 0 ? style.sub : ''].join(' ')}
+             data-id={id}>
+            <div>
+                <div className={style.info}>
+                    <button className={style.changeOrder}
+                            type="button"
+                            onClick={(button) => Categories.prototype.getCategoriesList(1 + parseInt(level), id)}>ico
+                    </button>
+                    <div className={style.itemPreview}>
+                        <img src={preview['100x60']} alt=""/>
+                    </div>
+                    <p>
+                        <span>{title}</span>
+                        <button className={style.up} type="button">icon</button>
+                    </p>
+                </div>
+            </div>
+            <div className={style.actions}>
+                <div>
+                    <span className={style.path}>/{slug}</span>
+                    <button className={style.edit} type="button">Редактировать</button>
+                    <button className={style.delete} type="button">Удалить</button>
+                </div>
+            </div>
+        </div>
+    )
+};
 
 export default Categories;

@@ -7,9 +7,11 @@
   display: flex;
   justify-content: space-between;
   background: @l_gray;
+  flex-wrap: wrap;
   .left {
     width: 100%;
     max-width: 540px;
+    flex-basis: 540px;
     .title {
       .font(@m_r, 24);
       color: @dtext;
@@ -195,6 +197,7 @@
   .right {
     width: 100%;
     max-width: 850px;
+    flex-basis: 850px;
     .head {
       width: 100%;
       display: flex;
@@ -307,6 +310,9 @@
         display: flex;
         flex-direction: column;
         .item {
+          &>.sub{
+            width: 90%;
+          }
           width: 100%;
           height: 60px;
           display: flex;
